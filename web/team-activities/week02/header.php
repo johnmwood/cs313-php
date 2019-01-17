@@ -11,9 +11,9 @@
         <div><img src="/images/logo.jpg" alt="logo"></div>
         <h3>Super Smarsh Burgers</h3>
         <ul>
-            <li><a href="login.php">Login</a></li>
-            <li><a href="about.php"></a>About Us</li>
-            <li><a href="home.php">Home</a></li>
+            <li><a href="/login.php">Login</a></li>
+            <li><a href="/about.php"></a>About Us</li>
+            <li><a href="/home.php">Home</a></li>
         </ul>
         </nav>
     </header>
