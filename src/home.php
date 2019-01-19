@@ -1,24 +1,17 @@
 <!DOCTYPE html>
-<?php
-$page = $_SERVER["php"]
-?> 
 <html lang="en">
 <head>
+    <link rel="stylesheet" type="text/css" href="styles.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Super Smarsh Burgers</title>
+    <title>Home</title>
 </head>
 <body>
-    <?php
-    include 'header.php';
-    ?>
-    <h1>Welcome to Super Smarsh Burgers!</h1>
-    <button>Logout</button>
-
-    <?php
-
-    ?> 
-    
+    <div class="page">
+        <?php
+        require 'header.php';   
+        ?>
+    </div>
 </body>
 </html>
