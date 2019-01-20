@@ -9,7 +9,7 @@
 <body>
     <header>
         <nav class="main-nav">
-        <div><img src="/images/logo.jpg" alt="logo"></div>
+        <div><img src="/images/evergreen.png" alt="logo"></div>
         <h3>CS313 Web Application</h3>
         <ul>
             <li><a href="about.php"></a>About Us</li>
