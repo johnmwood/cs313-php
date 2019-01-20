@@ -10,3 +10,11 @@
     background-color: lightblue; 
     position: fixed; 
 }
+
+.nav-item .active {
+    color: #90a4ae;
+}
+
+.nav-item {
+    color: #78909c;
+}
