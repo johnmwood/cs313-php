@@ -1,11 +1,9 @@
-/* .page {
-    grid-template-rows: 30px auto; 
-    grid-template-columns: 300px 1fr; 
-    height: 100vh;  
-} */
+.page {
+    display: flex; 
+    height: 100%; 
+}
 
 .main-nav {
-    display: flex; 
     align-items: left; 
     background-color: lightblue; 
     position: fixed; 
