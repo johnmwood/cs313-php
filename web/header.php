@@ -12,7 +12,7 @@
         <div><img src="/images/evergreen.png" alt="logo"></div>
         <h3>CS313 Web App</h3>
         <ul>
-            <li><a href="about.php">About Us</a></li>
+            <li><a href="about.php">About Me</a></li>
             <li><a href="home.php">Home</a></li>
         </ul>
         </nav> 

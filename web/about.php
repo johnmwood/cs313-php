@@ -22,6 +22,7 @@
             by my favorite band, Snarky Puppy. There is a triple polyrhythm at the end 
             and it's incredible. 
         </p>
+        <img src="images/family.jpg" alt="My family and I">
     </div>
     </div>
 </body>

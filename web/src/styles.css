@@ -1,8 +1,8 @@
-.page {
+/* .page {
     grid-template-rows: 30px auto; 
     grid-template-columns: 300px 1fr; 
-    height: 100vh; 
-}
+    height: 100vh;  
+} */
 
 .main-nav {
     display: flex; 
