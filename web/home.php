@@ -12,10 +12,8 @@
         <?php
         require 'header.php';   
         ?>
-        <div class="content">
-            <h2>Assignments:</h2>
-            <h4>under development...</h4>
-        </div>
+        <h2>Assignments:</h2>
+        <h4>under development...</h4>
     </div>
 </body>
 </html>
