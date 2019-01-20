@@ -11,10 +11,6 @@
     height: 40px; 
 }
 
-.nav-item .active {
-    color: #90a4ae;
-}
-
-.nav-item {
-    color: #78909c;
+a:active {
+    color: forestgreen;
 }
