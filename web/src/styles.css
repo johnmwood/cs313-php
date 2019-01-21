@@ -35,7 +35,7 @@
     color: forestgreen;
 }
 
-body header {
+header {
     background: #455a64;
     display: flex;
     align-content: flex-start;
