@@ -2,7 +2,7 @@
 $file = pathinfo($_SERVER['PHP_SELF'], PATHINFO_FILENAME);
 ?>
 <nav class="main-nav">
-    <div class="logo"><a href="home.php"><img src="/images/evergreen.png" alt="logo"></a></div>
+    <a class="logo" href="home.php"><img src="/images/evergreen.png" alt="logo">
     <h3>CS313 Web App</h3>
     <div>
         <a class="nav-item <?php if ($file === 'about') echo 'active' ?>" href="about.php" >About Me</a>
