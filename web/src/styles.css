@@ -1,5 +1,5 @@
 .page {
-    /* height: 100%;  */
+    display: flex; 
 }
 
 .main-nav {
@@ -16,6 +16,11 @@
     font-size: 18px; 
     line-height: 25px;
     border-radius: 4px;
+}
+
+.main-nav .logo-title {
+    font-size: 25px;
+    font-weight: bold;
 }
 
 .main-nav a.active {
