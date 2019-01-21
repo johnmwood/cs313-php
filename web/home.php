@@ -8,10 +8,10 @@
     <title>Home</title>
 </head>
 <body>
+    <?php
+    require 'header.php';   
+    ?>
     <div class="page">
-        <?php
-        require 'header.php';   
-        ?>
         <h2>Assignments:</h2>
         <h4>under development...</h4>
     </div>

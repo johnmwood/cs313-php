@@ -8,10 +8,10 @@
     <title>About Me</title>
 </head>
 <body>
-    <div class="page">
     <?php
     require 'header.php'; 
     ?> 
+    <div class="page">
     <p>
         My name is John Wood. I have really enjoyed working in four different 
         internships in software engineering and data science. During the Winter
