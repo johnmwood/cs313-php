@@ -1,0 +1,48 @@
+.page {
+    display: flex; 
+}
+
+.main-nav {
+    overflow: hidden;
+    background-color: lightblue; 
+    padding: 20px 10px; 
+}
+
+.main-nav a {
+    float: left;
+    text-align: center;
+    padding: 12px;
+    text-decoration: none;
+    font-size: 18px; 
+    line-height: 25px;
+    border-radius: 4px;
+}
+
+.main-nav .logo-title {
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.main-nav a.active {
+    color: forestgreen;
+}
+
+.main-nav a:hover {
+    background-color: #70ac73; 
+}
+
+.active {
+    color: forestgreen;
+}
+
+header {
+    background: #455a64;
+    display: flex;
+    align-content: flex-start;
+    position: fixed;
+    width: 100%;
+    height: 128px;
+    top: 0;
+    left: 0;
+    font-size: 130%; 
+}
