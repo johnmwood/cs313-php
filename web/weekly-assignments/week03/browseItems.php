@@ -11,17 +11,44 @@
         <?php
             require '../../header.php'; 
         ?>
-        <div class="row">
-            <div class="col s12">
-                <div class="row">
-                    <div class="input-field col s12">
-                        <i class="material-icons prefix">textsms</i>
-                        <input type="text" id="autocomplete-input" class="autocomplete">
-                        <label for="autocomplete-input">Autocomplete</label>
-                    </div>
-                </div>
-            </div>
-        </div>
+        <form action="#">
+        <p>
+            <label>
+            <input type="checkbox" class="filled-in" />
+            <span>Cat</span>
+            </label>
+        </p>
+        <p>
+            <label>
+            <input type="checkbox" class="filled-in" />
+            <span>Dog</span>
+            </label>
+        </p>
+        <p>
+            <label>
+            <input type="checkbox" class="filled-in" />
+            <span>Goat</span>
+            </label>
+        </p>
+        <p>
+            <label>
+            <input type="checkbox" class="filled-in" />
+            <span>Frog</span>
+            </label>
+        </p>
+        <p>
+            <label>
+            <input type="checkbox" class="filled-in" />
+            <span>Turtle</span>
+            </label>
+        </p>
+        <p>
+            <label>
+            <input type="checkbox" class="filled-in" />
+            <span>Fox</span>
+            </label>
+        </p>
+        </form>
     </div>
 </body>
 </html>
