@@ -2,7 +2,7 @@
     $file = pathinfo($_SERVER['PHP_SELF'], PATHINFO_FILENAME);
 ?>
 <nav>
-<div class="nav-wrapper">
+<div class="nav-wrapper teal lighten-2">
     <a href="home.php" class="brand-logo">
         <img src="./images/evergreen.png" alt="">CS313 PHP Web App
 </a>
