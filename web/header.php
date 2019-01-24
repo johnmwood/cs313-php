@@ -1,5 +1,5 @@
 <?php
-$file = pathinfo($_SERVER['PHP_SELF'], PATHINFO_FILENAME);
+    $file = pathinfo($_SERVER['PHP_SELF'], PATHINFO_FILENAME);
 ?>
 <nav>
 <div class="nav-wrapper">
@@ -7,13 +7,13 @@ $file = pathinfo($_SERVER['PHP_SELF'], PATHINFO_FILENAME);
         <img src="./images/evergreen.png" alt="">CS313 PHP Web App
 </a>
     <ul id="nav-mobile" class="right hide-on-med-and-down">
-    <li>
-        <a class="nav-item <?php if ($file === 'about') echo 'active' ?>" href="about.php">
+    <li <?php if ($file === 'about') echo 'class="active"' ?>>
+        <a class="nav-item" href="about.php">
             About Me
         </a>
     </li>
-    <li>
-        <a class="nav-item <?php if ($file === 'home') echo 'active' ?>" href="home.php">
+    <li <?php if ($file === 'home') echo 'class="active"' ?>>
+        <a class="nav-item" href="home.php">
             Home
         </a>
     </li>
