@@ -13,7 +13,9 @@
             require 'header.php';   
         ?>
         <h2>Assignments:</h2>
-        <h4>under development...</h4>
+        <ul>
+            <li><a href="./weekly-assignments/week03/browseItems.php">Week 03 - Shopping Cart</a></li>
+        </ul>
     </div>
 </body>
 </html>
