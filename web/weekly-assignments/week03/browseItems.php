@@ -52,8 +52,7 @@
             <button name="fileurlsubmitted" 
                     value="ANY_VALUE_HERE" 
                     class="btn waves-effect waves-light" 
-                    id="submitFileUrlForDownload">Download
-                <i class="material-icons right">file_download</i>
+                    id="submitFileUrlForDownload">Submit Order
             </button>
         </form>
     </div>
