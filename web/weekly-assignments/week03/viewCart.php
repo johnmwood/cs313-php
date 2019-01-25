@@ -1,5 +1,5 @@
 <?php 
-    $animals = htmlspecialchars($_POST["anmial"]); 
+    $animals = $_POST["anmials"]; 
 ?>
 
 <!DOCTYPE html>
