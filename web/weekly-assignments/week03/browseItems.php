@@ -15,37 +15,37 @@
             <p>What would you like to buy?</p>
             <p>
                 <label>
-                <input type="checkbox" class="filled-in" name="animal" />
+                <input type="checkbox" class="filled-in" name="animal" value="Cat" />
                 <span>Cat</span>
                 </label>
             </p>
             <p>
                 <label>
-                <input type="checkbox" class="filled-in" name="animal" />
+                <input type="checkbox" class="filled-in" name="animal" value="Dog"  />
                 <span>Dog</span>
                 </label>
             </p>
             <p>
                 <label>
-                <input type="checkbox" class="filled-in" name="animal" />
+                <input type="checkbox" class="filled-in" name="animal" value="Goat" />
                 <span>Goat</span>
                 </label>
             </p>
             <p>
                 <label>
-                <input type="checkbox" class="filled-in" name="animal" />
+                <input type="checkbox" class="filled-in" name="animal" value="Frog" />
                 <span>Frog</span>
                 </label>
             </p>
             <p>
                 <label>
-                <input type="checkbox" class="filled-in" name="animal" />
+                <input type="checkbox" class="filled-in" name="animal" value="Turtle" />
                 <span>Turtle</span>
                 </label>
             </p>
             <p>
                 <label>
-                <input type="checkbox" class="filled-in" name="animal" />
+                <input type="checkbox" class="filled-in" name="animal" value="Fox" />
                 <span>Fox</span>
                 </label>
             </p>
