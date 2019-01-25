@@ -1,5 +1,5 @@
 <?php 
-    $animals = $_POST["anmials"]; 
+    $animals = $_POST["animals"]; 
 ?>
 
 <!DOCTYPE html>
