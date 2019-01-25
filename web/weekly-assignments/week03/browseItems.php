@@ -49,7 +49,8 @@
                 <span>Fox</span>
                 </label>
             </p>
-            <button name="fileurlsubmitted" 
+            <button name="fileurlsubmitted"
+                    type="submit"  
                     value="ANY_VALUE_HERE" 
                     class="btn waves-effect waves-light" 
                     id="submitFileUrlForDownload">Submit Order
