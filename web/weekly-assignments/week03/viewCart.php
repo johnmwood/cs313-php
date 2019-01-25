@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>View Cart </title>
+    <title>View Cart</title>
 </head>
 <body>
     <div className="container">
@@ -16,27 +16,27 @@
                 <div class="row">
                     <div class="input-field col s6">
                         <input id="first_name" type="text" class="validate" name="first">
-                        <label for="first_name">First Name</label>
+                        <label class="active" for="first_name">First Name</label>
                     </div>
                     <div class="input-field col s6">
                         <input id="last_name" type="text" class="validate" name="last">
-                        <label for="last_name">Last Name</label>
+                        <label class="active" for="last_name">Last Name</label>
                     </div>
                 </div>
                 <div class="row">
                     <div class="input-field col s12">
                         <input id="address" type="text" class="validate" name="address">
-                        <label for="address">Address</label>
+                        <label class="active" for="address">Address</label>
                     </div>
                 </div>
                 <div class="row">
                     <div class="input-field col s6">
                         <input id="zip" type="text" class="validate" name="zip">
-                        <label for="zip">Zip Code</label>
+                        <label class="active" for="zip">Zip Code</label>
                     </div> 
                     <div class="input-field col s6">
                         <input id="state" type="text" class="validate" name="state">
-                        <label for="state">State</label>
+                        <label class="active" for="state">State</label>
                     </div> 
                 </div>
 

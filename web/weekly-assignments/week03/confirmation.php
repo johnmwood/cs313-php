@@ -24,13 +24,14 @@
         <?php
         echo '<ul>'; 
         foreach($animals as $animal) {
-            echo "<li><p>$animal</p></li>"; 
+            $cleanAnimal = htmlspecialchars($animal);
+            echo "<li><p>$cleanAnimal</p></li>"; 
         }
-        echo '</ul>'; 
+        echo '</ul></br>'; 
 
-        echo "Address: $address"; 
-        echo "Zip: $zip"; 
-        echo "State: $state"; 
+        echo "Address: $address</br>"; 
+        echo "Zip: $zip</br>"; 
+        echo "State: $state</br>"; 
         ?>
     </div>
 </body>
