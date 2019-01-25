@@ -11,43 +11,44 @@
         <?php
             require '../../header.php'; 
         ?>
-        <form action="#">
-        <p>
-            <label>
-            <input type="checkbox" class="filled-in" />
-            <span>Cat</span>
-            </label>
-        </p>
-        <p>
-            <label>
-            <input type="checkbox" class="filled-in" />
-            <span>Dog</span>
-            </label>
-        </p>
-        <p>
-            <label>
-            <input type="checkbox" class="filled-in" />
-            <span>Goat</span>
-            </label>
-        </p>
-        <p>
-            <label>
-            <input type="checkbox" class="filled-in" />
-            <span>Frog</span>
-            </label>
-        </p>
-        <p>
-            <label>
-            <input type="checkbox" class="filled-in" />
-            <span>Turtle</span>
-            </label>
-        </p>
-        <p>
-            <label>
-            <input type="checkbox" class="filled-in" />
-            <span>Fox</span>
-            </label>
-        </p>
+        <form method="POST" action="viewCart.php">
+            <p>What would you like to buy?</p>
+            <p>
+                <label>
+                <input type="checkbox" class="filled-in" name="animal" />
+                <span>Cat</span>
+                </label>
+            </p>
+            <p>
+                <label>
+                <input type="checkbox" class="filled-in" name="animal" />
+                <span>Dog</span>
+                </label>
+            </p>
+            <p>
+                <label>
+                <input type="checkbox" class="filled-in" name="animal" />
+                <span>Goat</span>
+                </label>
+            </p>
+            <p>
+                <label>
+                <input type="checkbox" class="filled-in" name="animal" />
+                <span>Frog</span>
+                </label>
+            </p>
+            <p>
+                <label>
+                <input type="checkbox" class="filled-in" name="animal" />
+                <span>Turtle</span>
+                </label>
+            </p>
+            <p>
+                <label>
+                <input type="checkbox" class="filled-in" name="animal" />
+                <span>Fox</span>
+                </label>
+            </p>
         </form>
     </div>
 </body>

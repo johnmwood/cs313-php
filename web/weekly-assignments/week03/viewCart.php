@@ -1,3 +1,7 @@
+<?php 
+    $animals = htmlspecialchars($_POST["anmial"]); 
+?>
+
 <!DOCTYPE html>
 <html lang="en">
     <link rel="stylesheet" href="../../src/styles.css">
@@ -11,7 +15,15 @@
         <?php
             require '../../header.php'; 
         ?>
-        <button class="btn waves-effect waves-light" type="submit" name="action">Submit
+        <h3>Your Cart</h3>
+        <?php
+        echo '<ul>'; 
+        foreach($animals as $animal) {
+            echo "<li>$animal</li>"; 
+        }
+        echo '</ul>'; 
+        ?>
+        <button class="btn waves-effect waves-light" type="submit" name="action">Confirm Purchase
             <i class="material-icons right">send</i>
         </button>
     </div>
