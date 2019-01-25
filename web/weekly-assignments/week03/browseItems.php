@@ -49,12 +49,14 @@
                 <span>Fox</span>
                 </label>
             </p>
-            <button name="fileurlsubmitted"
+            <input type="submit" name="formSubmit" value="Submit" />
+
+            <!-- <button name="fileurlsubmitted"
                     type="submit"  
                     value="ANY_VALUE_HERE" 
                     class="btn waves-effect waves-light" 
                     id="submitFileUrlForDownload">Submit Order
-            </button>
+            </button> -->
         </form>
     </div>
 </body>
