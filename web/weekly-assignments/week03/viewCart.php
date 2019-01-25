@@ -15,7 +15,7 @@
         <?php
             require '../../header.php'; 
         ?>
-        <h3>Your Cart</h3>
+        <h3>Your Cart:</h3>
         <?php
         echo '<ul>'; 
         foreach($animals as $animal) {
