@@ -1,4 +1,6 @@
 <?php 
+    session_start(); 
+
     $animals = $_POST["animals"];
     $first = htmlspecialchars($_POST["first"]); 
     $last = htmlspecialchars($_POST["last"]); 

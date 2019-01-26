@@ -1,3 +1,6 @@
+<?php
+session_start(); 
+?>
 <!DOCTYPE html>
 <html lang="en">
     <link rel="stylesheet" href="../../src/styles.css">
@@ -39,7 +42,7 @@
                         <label class="active" for="state">State</label>
                     </div> 
                 </div>
-                <input type="hidden" name="animals[]" value="<?php echo isset($_POST['animals[]']) ? $_POST['animals[]'] : '' ?>" />
+                <input type="hidden" name="animals[]" value="<?php echo isset($_POST['animals']) ? $_POST['animals'] : '' ?>" />
 
                 <button class="btn waves-effect waves-light" type="submit" name="action">Confirm Purchase</button>
             </form>  
