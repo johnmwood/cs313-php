@@ -39,11 +39,9 @@
                         <label class="active" for="state">State</label>
                     </div> 
                 </div>
+                <input type="text" name="animals" value="<?php echo isset($_POST["animals"]) ? $_POST["animals"] : '' ?>" />
 
-                <!-- <input type="submit" name="formSubmit" value="Submit" /> -->
-                <button class="btn waves-effect waves-light" type="submit" name="action" value="sometest">Confirm Purchase
-                    <i class="material-icons right">send</i>
-                </button>
+                <button class="btn waves-effect waves-light" type="submit" name="action">Confirm Purchase</button>
             </form>  
         </div>
     </div>

@@ -12,7 +12,7 @@
             require '../../header.php'; 
         ?>
         <form method="POST" action="viewCart.php">
-            <p>What black market animal would you like to purchase?</p>
+            <p>What black market animals would you like to purchase?</p>
             <p>
                 <label>
                 <input type="checkbox" class="filled-in" name="animals[]" value="Cat" />
