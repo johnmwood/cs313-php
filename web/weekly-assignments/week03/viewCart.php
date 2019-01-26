@@ -40,12 +40,12 @@
                     </div> 
                 </div>
 
-                <input type="submit" name="formSubmit" value="Submit" />
+                <!-- <input type="submit" name="formSubmit" value="Submit" /> -->
+                <button class="btn waves-effect waves-light" type="submit" name="action">Confirm Purchase
+                    <i class="material-icons right">send</i>
+                </button>
             </form>  
         </div>
-        <!-- <button class="btn waves-effect waves-light" type="submit" name="action">Confirm Purchase
-            <i class="material-icons right">send</i>
-        </button> -->
     </div>
 </body>
 </html>

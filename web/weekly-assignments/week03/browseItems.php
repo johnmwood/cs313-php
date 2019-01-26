@@ -12,7 +12,7 @@
             require '../../header.php'; 
         ?>
         <form method="POST" action="viewCart.php">
-            <p>What would you like to buy?</p>
+            <p>What black market animal would you like to purchase?</p>
             <p>
                 <label>
                 <input type="checkbox" class="filled-in" name="animals[]" value="Cat" />
@@ -56,6 +56,7 @@
                     class="btn waves-effect waves-light" 
                     id="submitFileUrlForDownload">Submit Order
             </button> -->
+            
         </form>
     </div>
 </body>
