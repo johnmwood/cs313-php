@@ -41,7 +41,7 @@
                 </div>
 
                 <!-- <input type="submit" name="formSubmit" value="Submit" /> -->
-                <button class="btn waves-effect waves-light" type="submit" name="action">Confirm Purchase
+                <button class="btn waves-effect waves-light" type="submit" name="action" value="sometest">Confirm Purchase
                     <i class="material-icons right">send</i>
                 </button>
             </form>  
