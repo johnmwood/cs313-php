@@ -1,9 +1,7 @@
 <?php
 session_start(); 
 
-foreach ($_POST as $key => $value) {
-    $_SESSION['post'][$key] = $value;
-}
+$_SESSION["animals"] = $_POST["animals"];
 ?>
 <!DOCTYPE html>
 <html lang="en">
