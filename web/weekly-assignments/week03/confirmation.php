@@ -28,7 +28,7 @@
         echo '<ul>'; 
         foreach($animals as $animal) {
             $cleanAnimal = htmlspecialchars($animal);
-            echo "<li><p>$cleanAnimal</p></li>"; 
+            echo "<li><h5>$cleanAnimal</h5></li>"; 
         }
         echo '</ul></br>'; 
 
