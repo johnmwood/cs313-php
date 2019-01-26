@@ -1,7 +1,7 @@
 <?php 
     session_start(); 
 
-    $animals = $_POST["animals"];
+    $animals = extract($_POST["animals"]);
     $first = htmlspecialchars($_POST["first"]); 
     $last = htmlspecialchars($_POST["last"]); 
     $address = htmlspecialchars($_POST["address"]);
