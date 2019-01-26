@@ -1,8 +1,8 @@
 <?php 
     session_start(); 
 
-    extract($_SESSION["post"]);
-    $animals = $_SESSION["animals"];
+    $values = extract($_SESSION["post"]);
+    $animals = $values["animals"];
     $first = htmlspecialchars($_POST["first"]); 
     $last = htmlspecialchars($_POST["last"]); 
     $address = htmlspecialchars($_POST["address"]);
