@@ -1,9 +1,12 @@
 <?php
+  require("../db/db_connect.php");
+
   $file = pathinfo($_SERVER['PHP_SELF'], PATHINFO_FILENAME);
   $root = $_SERVER["DOCUMENT_ROOT"]; 
 
-  $user = 'test_user'; # TODO: read value from database 
-  $user_credits = 5; # TODO: read value from database 
+  $user_credits = $db->query("SELECT username 
+                              FROM users 
+                              WHERE username = $dbUser"); 
 ?>
 <nav>
 <div class="nav-wrapper teal lighten-2">
@@ -12,8 +15,8 @@
   </a>
   <ul id="nav-mobile" class="right">
     <li className="btn-flat blue">
-      User Credits: <?php echo $user_credits ?>
       <i class="small material-icons">attach_money</i>
+      User Credits: <?php echo $user_credits ?>
     </li>
     <li <?php if ($file === 'about') echo 'class="active"' ?>>
       <a class="nav-item" href="<?php echo $root . '/about.php'; ?>">
