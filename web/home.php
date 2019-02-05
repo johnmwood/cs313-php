@@ -14,7 +14,10 @@
         ?>
         <h2>Assignments:</h2>
         <ul>
-            <li><a href="./weekly-assignments/week03/browseItems.php">Week 03 - Shopping Cart</a></li>
+            <li><h3 href="./weekly-assignments/week03/browseItems.php">Week 03 - Shopping Cart</h3></li>
+        </ul>
+        <ul>
+            <li><h3 href="./project01/index.php">Project 01</h3></li>
         </ul>
     </div>
 </body>
