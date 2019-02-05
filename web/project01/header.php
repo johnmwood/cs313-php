@@ -10,9 +10,9 @@
   <a href="home.php" class="brand-logo">
     <img src="<?php echo $root . '/images/evergreen.png'; ?>" alt="">CS313 PHP Web App
   </a>
-  <ul id="nav-mobile" class="right hide-on-med-and-down">
+  <ul id="nav-mobile" class="right">
     <li className="btn-flat blue">
-      Credits: <?php echo $user_credits ?>
+      User Credits: <?php echo $user_credits ?>
       <i class="small material-icons">attach_money</i>
     </li>
     <li <?php if ($file === 'about') echo 'class="active"' ?>>
