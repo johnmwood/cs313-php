@@ -14,10 +14,10 @@
         ?>
         <h2>Assignments:</h2>
         <ul>
-            <li><h3 href="./weekly-assignments/week03/browseItems.php">Week 03 - Shopping Cart</h3></li>
+            <li><h5><a href="./weekly-assignments/week03/browseItems.php">Week 03 - Shopping Cart</a></h5></li>
         </ul>
         <ul>
-            <li><h3 href="./project01/index.php">Project 01</h3></li>
+            <li><h5><a href="./project01/index.php">Project 01</a></h5></li>
         </ul>
     </div>
 </body>
