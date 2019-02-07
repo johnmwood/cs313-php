@@ -30,7 +30,7 @@ try {
 
     foreach ($db->query("SELECT book, chapter, verse, content 
                          FROM scriptures 
-                         WHERE book = \'Job\'") as $scripture) 
+                         WHERE book = 'Job'") as $scripture) 
     {
       $html_chunk = "<b>" . $scripture["book"] . " </b>" .
                     "<b>" . $scripture["chapter"] . ":</b>" . 
