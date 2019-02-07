@@ -30,6 +30,8 @@ try {
                     "<b>" . $scripture["chapter"] . "</b>" . 
                     "<b>" . $scripture["verse"] . "</b>: " . 
                     "\"" . $scripture["content"] . "\"";
+
+      echo $html_chunk; 
     }
   ?>
 </body>
