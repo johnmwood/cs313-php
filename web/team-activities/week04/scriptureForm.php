@@ -8,10 +8,10 @@
 </head>
 <body>
   <form action="query_scriptures.php" method="get">
-    <input type="radio" name="selectedBook" value="John"/>John
-    <input type="radio" name="selectedBook" value="Job"/>Job
-    <input type="radio" name="selectedBook" value="D&C"/>D&C
-    <input type="radio" name="selectedBook" value="Mosiah"/>Mosiah
+    <input type="radio" name="selectedBook" value="John"/>John<br>
+    <input type="radio" name="selectedBook" value="Job"/>Job<br>
+    <input type="radio" name="selectedBook" value="D&C"/>D&C<br>
+    <input type="radio" name="selectedBook" value="Mosiah"/>Mosiah<br>
 
     <input type="submit">
   </form>  
