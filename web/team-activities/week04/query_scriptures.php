@@ -26,11 +26,14 @@ try {
 <body>
   <?php 
     $book = $_GET["selectedBook"];
-    echo "Please work: $book </br>"; 
-
-    foreach ($db->query("SELECT book, chapter, verse, content 
-                         FROM scriptures 
-                         WHERE book = '$book'") as $scripture) 
+    $query = $db->prepare('SELECT book, chapter, verse, content
+                           FROM scriptures
+                           WHERE book = :book');
+  
+    $query->bindValue(':book', $book, PDO::PARAM_STR);
+    // $query->bindValue(':id', $id, PDO::PARAM_INT);
+  
+    foreach ($query->execute() as $scripture) 
     {
       $html_chunk = "<b>" . $scripture["book"] . " </b>" .
                     "<b>" . $scripture["chapter"] . ":</b>" . 
