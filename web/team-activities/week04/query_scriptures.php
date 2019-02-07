@@ -25,8 +25,8 @@ try {
 </head>
 <body>
   <?php 
-    foreach ($db->query('SELECT book, chapter, verse, content FROM scriptures') as $scripture) {
-      $html_chunk = "<b>" . $scripture["book"] . "</b>" .
+    foreach ($db->query('SELECT book, chapter, verse, content FROM scriptures WHERE book = $_GET["selectedBook"]') as $scripture) {
+      $html_chunk = "<b>" . $scripture["book"] . " </b>" .
                     "<b>" . $scripture["chapter"] . ":</b>" . 
                     "<b>" . $scripture["verse"] . "</b>: " . 
                     "\"" . $scripture["content"] . "\" </br>";
