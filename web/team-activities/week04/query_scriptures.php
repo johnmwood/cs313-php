@@ -29,7 +29,7 @@ try {
       $html_chunk = "<b>" . $scripture["book"] . "</b>" .
                     "<b>" . $scripture["chapter"] . "</b>" . 
                     "<b>" . $scripture["verse"] . "</b>: " . 
-                    "\"" . $scripture["content"] . "\"";
+                    "\"" . $scripture["content"] . "\" </br>";
 
       echo $html_chunk; 
     }
