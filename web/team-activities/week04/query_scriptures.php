@@ -28,7 +28,7 @@ try {
     $book = $_GET["selectedBook"];
     $query = $db->prepare("SELECT book, chapter, verse, content
                            FROM scriptures
-                           WHERE book = :book");
+                           WHERE book=:book");
   
     $query->bindValue(':book', $book, PDO::PARAM_STR);
     $scriptures = $query->fetchAll(PDO::FETCH_ASSOC); 
