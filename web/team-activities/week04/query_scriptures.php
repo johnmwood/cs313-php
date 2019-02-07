@@ -31,6 +31,8 @@ try {
                            WHERE book = :book");
   
     $query->bindValue(':book', $book, PDO::PARAM_STR);
+    $query->execute(); 
+
     $scriptures = $query->fetchAll(); 
     // $query->bindValue(':id', $id, PDO::PARAM_INT);
   
