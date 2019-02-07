@@ -26,6 +26,8 @@ try {
 <body>
   <?php 
     $book = $_GET["selectedBook"];
+    echo "Please work: $book"; 
+
     foreach ($db->query("SELECT book, chapter, verse, content 
                          FROM scriptures 
                          WHERE book = $book") as $scripture) 
