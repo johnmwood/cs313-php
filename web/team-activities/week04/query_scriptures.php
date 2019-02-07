@@ -26,11 +26,11 @@ try {
 <body>
   <?php 
     $book = $_GET["selectedBook"];
-    echo "Please work: $book"; 
+    echo "Please work: $book </br>"; 
 
     foreach ($db->query("SELECT book, chapter, verse, content 
                          FROM scriptures 
-                         WHERE book = 'Job'") as $scripture) 
+                         WHERE book = '$book'") as $scripture) 
     {
       $html_chunk = "<b>" . $scripture["book"] . " </b>" .
                     "<b>" . $scripture["chapter"] . ":</b>" . 
