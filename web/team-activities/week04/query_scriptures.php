@@ -25,10 +25,10 @@ try {
 </head>
 <body>
   <?php 
-  echo "Please work:" .  $_GET["selectedBook"]; 
+    $book = $_GET["selectedBook"];
     foreach ($db->query("SELECT book, chapter, verse, content 
                          FROM scriptures 
-                         WHERE book = " . $_GET["selectedBook"]) as $scripture) 
+                         WHERE book = $book") as $scripture) 
     {
       $html_chunk = "<b>" . $scripture["book"] . " </b>" .
                     "<b>" . $scripture["chapter"] . ":</b>" . 
