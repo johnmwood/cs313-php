@@ -31,9 +31,10 @@ try {
                            WHERE book = ':book'");
   
     $query->bindValue(':book', $book, PDO::PARAM_STR);
+    $query->execute(); 
     // $query->bindValue(':id', $id, PDO::PARAM_INT);
   
-    foreach ($query->execute() as $scripture) 
+    foreach ($query as $scripture) 
     {
       $html_chunk = "<b>" . $scripture["book"] . " </b>" .
                     "<b>" . $scripture["chapter"] . ":</b>" . 
