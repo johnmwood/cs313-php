@@ -33,7 +33,7 @@ try {
     $query->bindValue(':book', $book, PDO::PARAM_STR);
     $query->execute(); 
 
-    $scriptures = $query->fetchAll(); 
+    $scriptures = $query->fetch(PDO::FETCH_ASSOC);
     // $query->bindValue(':id', $id, PDO::PARAM_INT);
   
     foreach($scriptures as $scripture)
