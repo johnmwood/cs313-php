@@ -27,6 +27,6 @@ foreach($emails as $email) {
     <title>Document</title>
   </head>
   <body>
-      <?php echo "<h2>$emailsFinal</h2>"; ?>
+      <?php foreach($emailsFinal as $email) echo "<h2>$email</h2>"; ?>
 </body>
 </html>
