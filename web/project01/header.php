@@ -20,7 +20,7 @@
   </a>
   <ul id="nav-mobile" class="right">
     <li className="btn-flat blue">
-      User Credits: <?php echo $user_credits ?>
+      User Credits: <?php echo $user_credits[0] ?>
       <i class="small material-icons">attach_money</i>
     </li>
     <li <?php if ($file === 'about') echo 'class="active"' ?>>
