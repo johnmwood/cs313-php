@@ -11,7 +11,7 @@
   $query->bindValue(':username', $username, PDO::PARAM_STR); 
   $query->execute(); 
 
-  $user_credits = $query->fetchAll();
+  $row = $query->fetch(PDO::FETCH_ASSOC);
 ?>
 <nav>
 <div class="nav-wrapper teal lighten-2">
@@ -20,7 +20,7 @@
   </a>
   <ul id="nav-mobile" class="right">
     <li className="btn-flat blue">
-      User Credits: <?php echo $user_credits[0] ?>
+      User Credits: <?php echo $row["credits"] ?>
       <i class="small material-icons">attach_money</i>
     </li>
     <li <?php if ($file === 'about') echo 'class="active"' ?>>
