@@ -11,7 +11,7 @@
   $query->bindValue(':username', $username, PDO::PARAM_STR); 
   $query->execute(); 
 
-  $user_credits = $query->fetch(PDO::FETCH_ASSOC);
+  $user_credits = $query->fetchAll();
 ?>
 <nav>
 <div class="nav-wrapper teal lighten-2">
