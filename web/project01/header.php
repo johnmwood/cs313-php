@@ -4,9 +4,13 @@
   $file = pathinfo($_SERVER['PHP_SELF'], PATHINFO_FILENAME);
   $root = $_SERVER["DOCUMENT_ROOT"]; 
 
-  // $user_credits = $db->query("SELECT username 
-  //                             FROM users 
-  //                             WHERE username = $dbUser"); 
+  $query = $db->prepare("SELECT credits
+                         FROM users
+                         WHERE username = :dbUser"); 
+  $query->bindValue(':dbUser', $dbUser, PDO::PARAM_STR); 
+  $query->execute(); 
+
+  $user_credits = $query->fetchAll(); 
 ?>
 <nav>
 <div class="nav-wrapper teal lighten-2">
