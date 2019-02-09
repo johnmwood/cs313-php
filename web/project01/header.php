@@ -20,8 +20,8 @@
   </a>
   <ul id="nav-mobile" class="right">
     <li className="btn-flat blue">
-      User Credits: <?php echo $row["credits"] ?>
       <i class="small material-icons">attach_money</i>
+      User Credits: <?php echo $row["credits"] ?>
     </li>
     <li <?php if ($file === 'about') echo 'class="active"' ?>>
       <a class="nav-item" href="<?php echo $root . '/about.php'; ?>">
