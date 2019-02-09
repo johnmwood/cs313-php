@@ -4,10 +4,11 @@
   $file = pathinfo($_SERVER['PHP_SELF'], PATHINFO_FILENAME);
   $root = $_SERVER["DOCUMENT_ROOT"]; 
 
+  $username = 'test'; # TODO: set up query for username with login
   $query = $db->prepare("SELECT credits
                          FROM users
-                         WHERE username = :dbUser"); 
-  $query->bindValue(':dbUser', $dbUser, PDO::PARAM_STR); 
+                         WHERE username = :username"); 
+  $query->bindValue(':username', $username, PDO::PARAM_STR); 
   $query->execute(); 
 
   $user_credits = $query->fetch(PDO::FETCH_ASSOC);
