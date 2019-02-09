@@ -21,8 +21,8 @@
   <ul id="nav-mobile" class="right">
     <li className="btn-flat blue">
       <div> 
-        <i class="small material-icons">attach_money</i>
         User Credits: <?php echo $row["credits"] ?>
+        <i class="small material-icons">attach_money</i>
       </div>
     </li>
     <li <?php if ($file === 'about') echo 'class="active"' ?>>

@@ -8,6 +8,7 @@
     $address = htmlspecialchars($_POST["address"]);
     $zip = htmlspecialchars($_POST["zip"]); 
     $state = htmlspecialchars($_POST["state"]); 
+    
 ?>
 
 <!DOCTYPE html>
