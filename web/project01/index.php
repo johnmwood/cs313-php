@@ -1,6 +1,8 @@
 <?php 
 session_start(); 
 require("../db/db_connect.php");
+
+  $username = 'test'; # TODO: set up query for username with login
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -14,6 +16,7 @@ require("../db/db_connect.php");
 </head>
 <body>
   <?php require("./header.php"); ?> 
+  <h4>Welcom <?php echo $username . "!"; ?></h4>
   <h3>Send out a survey</h3>
   <div class="row">
     <form class="" method="POST" action="confirmation.php">

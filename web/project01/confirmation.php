@@ -27,6 +27,12 @@ foreach($emails as $email) {
     <title>Document</title>
   </head>
   <body>
-      <?php foreach($emailsFinal as $email) echo "<h2>$email</h2>"; ?>
+    <h3>Confirm if you would like to send emails to these addresses: </h3>
+    <h5>Accepted email addresses: </h5>
+    <ul>
+      <?php foreach($emailsFinal as $email) echo "<li>$email</li>"; ?>
+    </ul>
+    
+    <button type="submit"><i class="material-icons">input</i></button>
 </body>
 </html>
