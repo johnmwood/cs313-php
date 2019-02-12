@@ -9,10 +9,10 @@
 </head>
 <body>
   <form action="insertTopics.php" method="post">
-    Book: <input type="text" name="book" id="">
-    Chapter: <input type="text" name="chapter" id="">
-    Verse: <input type="text" name="verse" id="">
-    Content: <textarea name="content" id="" cols="30" rows="10"></textarea>
+    Book: <input type="text" name="book" id=""><br>
+    Chapter: <input type="text" name="chapter" id=""><br>
+    Verse: <input type="text" name="verse" id=""><br>
+    Content: <textarea name="content" id="" cols="30" rows="10"></textarea><br>
 
     <?php
     
@@ -20,7 +20,7 @@
     $res = $db->query($sql); 
     
     foreach($res as $row) {
-      echo "<input type=\"checkbox\" name=\"topics[]\" value=\"" . $row["id"] . "\" >";
+      echo $row["name"] . ": <input type=\"checkbox\" name=\"topics[]\" value=\"" . $row["id"] . "\" ><br>";
     }
     
     ?>
