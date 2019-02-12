@@ -9,6 +9,7 @@ try {
   $content = $_POST["content"]; 
   $topics = $_POST["topics"]; 
 
+  // insert new scripture 
   $sql = "INSERT INTO scriptures(book, chapter, verse, content) VALUES (:book, :chapter, :verse, :content);";
   $query = $db->prepare($sql);
 
@@ -19,10 +20,19 @@ try {
 
   $query->execute();
 
-  // $newId = $db->lastInsertId('scriptures_id_seq'); 
-  // foreach($topics as $topic) {
+  // insert scripture topics 
+  $newId = $db->lastInsertId('scriptures_id_seq'); 
+  $sql = "INSERT INTO scriptureTopics VALUES (" . $newId . ", :topic)";
 
-  // }
+  foreach($topics as $topic) {
+    $query = $db->prepare($sql); 
+    $query->bindValue(':topic', $topic, PDO::PARAM_INT); 
+    $query->execute(); 
+  }
+
+  // redirect 
+  header('Location: displayScriptures.php');
+  die(); 
 } catch(PDOException $ex) { 
   echo 'Error!: ' . $ex->getMessage();
   echo 'RIP'; 
