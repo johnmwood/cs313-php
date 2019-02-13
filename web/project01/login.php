@@ -1,4 +1,3 @@
-<?php require("../../db/db_connect.php"); ?> 
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,7 +9,7 @@
   <title>Login</title>
 </head>
 <body>
-  <?php require('header.php'); ?>
+  <?php require('./header.php'); ?>
   <h3>Please login</h3>
   <div class="row">
     <form class="" method="POST" action="confirmLogin.php">
