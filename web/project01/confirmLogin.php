@@ -5,9 +5,9 @@ $username = $_POST["username"];
 $password = $_POST["password"];
 
 function checkLoginCredentials($username, $password) {
-  $sql = "SELECT username, password 
+  $sql = "SELECT users.username, users.password 
           FROM users
-          WHERE username = :username AND password = :password";
+          WHERE users.username = :username AND users.password = :password";
 
   $query = $db->prepare($sql); 
   $query->bindValue(':username', $username, PDO::PARAM_STR);
@@ -15,16 +15,23 @@ function checkLoginCredentials($username, $password) {
 
   $query->execute();
 
-  $results = $query->fetch(); 
+  $results = $query->fetch(PDO::FETCH_ASSOC); 
 
   if ($results) {
-    $GLOBALS["username"] = $username; 
+    $GLOBALS["loginName"] = $username; 
     header("Location: main.php"); 
+    die();
   } else {
     header("Location: login.php");
+    die();
   }
 } 
 
-checkLoginCredentials($username, $password); 
+try {
+  checkLoginCredentials($username, $password); 
+} catch (PDOException $ex) {
+  echo 'Error!: ' . $ex->getMessage();
+  die();
+}
 
 ?> 

@@ -4,7 +4,7 @@
   $file = pathinfo($_SERVER['PHP_SELF'], PATHINFO_FILENAME);
   $root = $_SERVER["DOCUMENT_ROOT"]; 
 
-  if ($GLOBALS["username"]) {
+  if ($GLOBALS["loginName"]) {
     $query = $db->prepare("SELECT credits
                            FROM users
                            WHERE username = :username"); 
@@ -22,9 +22,9 @@
   </a>
   <ul id="nav-mobile" class="right">
     <?php 
-      if ($GLOBALS["username"]) {
+      if ($GLOBALS["loginName"]) {
         echo "<li>
-                <div>" . $GLOBALS["username"] . "</div>
+                <div>" . $GLOBALS["loginName"] . "</div>
               </li>";
         echo "<li className=\"btn-flat blue\">
                 <div>
