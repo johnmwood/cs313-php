@@ -4,37 +4,35 @@
   $file = pathinfo($_SERVER['PHP_SELF'], PATHINFO_FILENAME);
   $root = $_SERVER["DOCUMENT_ROOT"]; 
 
-  $username = 'test'; # TODO: set up query for username with login
-  $query = $db->prepare("SELECT credits
-                         FROM users
-                         WHERE username = :username"); 
-  $query->bindValue(':username', $username, PDO::PARAM_STR); 
-  $query->execute(); 
-
-  $row = $query->fetch(PDO::FETCH_ASSOC);
+  if ($GLOBALS["username"]) {
+    $query = $db->prepare("SELECT credits
+                           FROM users
+                           WHERE username = :username"); 
+    $query->bindValue(':username', $GLOBALS["username"], PDO::PARAM_STR); 
+    $query->execute(); 
+  
+    $row = $query->fetch(PDO::FETCH_ASSOC);
+    $credits = $row["credits"];
+  }
 ?>
 <nav>
 <div class="nav-wrapper teal lighten-2">
   <a href="home.php" class="brand-logo">
-    <img src="<?php echo $root . '/images/evergreen.png'; ?>" alt="">CS313 PHP Web App
+    <img src="<?php echo $root . '../images/evergreen.png'; ?>" alt="">Emaily
   </a>
   <ul id="nav-mobile" class="right">
-    <li className="btn-flat blue">
-      <div> 
-        User Credits: <?php echo $row["credits"] ?>
-        <i class="small material-icons">attach_money</i>
-      </div>
-    </li>
-    <li <?php if ($file === 'about') echo 'class="active"' ?>>
-      <a class="nav-item" href="<?php echo $root . '/about.php'; ?>">
-        About Me
-      </a>
-    </li>
-    <li <?php if ($file === 'home') echo 'class="active"' ?>>
-      <a class="nav-item" href="<?php echo $root . '/home.php'; ?>">
-        Home
-      </a>
-    </li>
+    <?php 
+      if ($GLOBALS["username"]) {
+        echo "<li>
+                <div>" . $GLOBALS["username"] . "</div>
+              </li>";
+        echo "<li className=\"btn-flat blue\">
+                <div>
+                  User Credits: " . $credits . "
+                </div>
+             </li>";
+      }
+    ?>
   </ul>
 </div>
 </nav>
