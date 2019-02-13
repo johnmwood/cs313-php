@@ -1,20 +1,4 @@
-<?php 
-try {
-  $dbOpts = parse_url(getenv('DATABASE_URL'));
-
-  $dbHost = $dbOpts["host"];
-  $dbPort = $dbOpts["port"];
-  $dbUser = $dbOpts["user"];
-  $dbPassword = $dbOpts["pass"];
-  $dbName = ltrim($dbOpts["path"],'/');
-
-  $db = new PDO("pgsql:host=$dbHost;port=$dbPort;dbname=$dbName", $dbUser, $dbPassword);
-  $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-} catch (PDOException $ex) {
-  echo 'Error! ' . $ex->get_message(); 
-  die(); 
-}
-?>
+<?php require('../../db/db_connect.php'); ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
