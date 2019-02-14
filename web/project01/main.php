@@ -7,6 +7,7 @@
   <title>Welcome</title>
 </head>
 <body>
+  <?php require('./header.php'); ?>
   <h3>Welcome Peasant</h3>
 </body>
 </html>

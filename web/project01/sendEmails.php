@@ -1,8 +1,7 @@
 <?php 
-session_start(); 
-require("../db/dbConnect.php");
+  session_start(); 
+  require("../db/dbConnect.php");
 
-  $username = 'test'; # TODO: set up query for username with login
 ?>
 <!DOCTYPE html>
 <html lang="en">

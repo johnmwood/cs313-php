@@ -1,6 +1,8 @@
 <?php
   require("../db/dbConnect.php");
 
+  $db = connectPostgres(); 
+
   $file = pathinfo($_SERVER['PHP_SELF'], PATHINFO_FILENAME);
   $root = $_SERVER["DOCUMENT_ROOT"]; 
 

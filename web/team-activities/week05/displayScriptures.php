@@ -1,4 +1,4 @@
-<?php require('../../db/db_connect.php'); ?>
+<?php require('../../db/dbConnect.php'); ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>

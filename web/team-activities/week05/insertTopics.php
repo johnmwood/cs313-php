@@ -1,6 +1,6 @@
 <?php 
 
-require('../../db/db_connect.php');
+require('../../db/dbConnect.php');
 
 try {
   $book = $_POST["book"]; 
