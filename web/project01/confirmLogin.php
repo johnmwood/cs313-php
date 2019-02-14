@@ -1,5 +1,5 @@
 <?php 
-require("../../db/db_connect.php");
+require("../db/db_connect.php");
 
 function checkLoginCredentials($username, $password) {
   $sql = "SELECT users.username, users.password 
