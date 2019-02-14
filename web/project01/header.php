@@ -23,6 +23,7 @@
   <a href="home.php" class="brand-logo">
     <img src="<?php echo $root . '../images/evergreen.png'; ?>" alt="">Emaily
   </a>
+  Login name: <?php echo $loginName; ?>
   <ul id="nav-mobile" class="right">
     <?php 
       if ($loginName) {
