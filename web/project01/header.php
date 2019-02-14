@@ -8,6 +8,7 @@
   $loginName = $GLOBALS["loginName"];
 
   if ($loginName) {
+    echo "ENTERED LOGIN NAME!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"; 
     $query = $db->prepare("SELECT credits
                            FROM users
                            WHERE username = :username"); 
@@ -23,7 +24,6 @@
   <a href="home.php" class="brand-logo">
     <img src="<?php echo $root . '../images/evergreen.png'; ?>" alt="">Emaily
   </a>
-  Login name: <?php echo $loginName; ?>
   <ul id="nav-mobile" class="right">
     <?php 
       if ($loginName) {
