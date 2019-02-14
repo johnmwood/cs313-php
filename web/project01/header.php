@@ -1,14 +1,14 @@
 <?php
+  session_start(); 
   require("../db/dbConnect.php");
 
   $db = connectPostgres(); 
 
   $file = pathinfo($_SERVER['PHP_SELF'], PATHINFO_FILENAME);
   $root = $_SERVER["DOCUMENT_ROOT"]; 
-  $loginName = $GLOBALS["loginName"];
+  $loginName = $_SESSION["loginName"];
 
   if ($loginName) {
-    echo "ENTERED LOGIN NAME!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"; 
     $query = $db->prepare("SELECT credits
                            FROM users
                            WHERE username = :username"); 

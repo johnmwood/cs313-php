@@ -14,13 +14,13 @@
   <div class="row">
     <form class="" method="POST" action="./confirmLogin.php">
       <div class="row">
-        <div class="input-field col s12">
+        <div class="input-field col s6">
           <input id="username" type="text" class="validate" name="username">
           <label class="active" for="username">Username</label>
         </div>
       </div> 
       <div class="row">
-        <div class="input-field col s12">
+        <div class="input-field col s6">
           <input id="password" type="text" class="validate" name="password">
           <label class="active" for="state">password</label>
         </div> 

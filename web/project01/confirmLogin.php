@@ -1,4 +1,5 @@
 <?php 
+session_start(); 
 require("../db/dbConnect.php");
 
 function checkLoginCredentials($username, $password) {
@@ -17,7 +18,7 @@ function checkLoginCredentials($username, $password) {
   $results = $query->fetch(PDO::FETCH_ASSOC); 
 
   if ($results["username"]) {
-    $GLOBALS["loginName"] = $username; 
+    $_SESSION["loginName"] = $username;  
     header("Location: main.php"); 
     die();
   } else {
