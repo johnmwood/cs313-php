@@ -1,9 +1,6 @@
 <?php 
 require("../../db/db_connect.php");
 
-$username = $_POST["username"]; 
-$password = $_POST["password"];
-
 function checkLoginCredentials($username, $password) {
   $sql = "SELECT users.username, users.password 
           FROM users
@@ -17,7 +14,7 @@ function checkLoginCredentials($username, $password) {
 
   $results = $query->fetch(PDO::FETCH_ASSOC); 
 
-  if ($results) {
+  if ($results["username"]) {
     $GLOBALS["loginName"] = $username; 
     header("Location: main.php"); 
     die();
@@ -26,6 +23,9 @@ function checkLoginCredentials($username, $password) {
     die();
   }
 } 
+
+$username = $_POST["username"]; 
+$password = $_POST["password"];
 
 try {
   checkLoginCredentials($username, $password); 
