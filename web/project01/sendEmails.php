@@ -1,6 +1,6 @@
 <?php 
 session_start(); 
-require("../db/db_connect.php");
+require("../db/dbConnect.php");
 
   $username = 'test'; # TODO: set up query for username with login
 ?>

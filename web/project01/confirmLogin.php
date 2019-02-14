@@ -1,7 +1,9 @@
 <?php 
-require("../db/db_connect.php");
+require("../db/dbConnect.php");
 
 function checkLoginCredentials($username, $password) {
+  $db = connectPostgres(); 
+
   $sql = "SELECT users.username, users.password 
           FROM users
           WHERE users.username = :username AND users.password = :pword";
