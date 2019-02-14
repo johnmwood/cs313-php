@@ -7,11 +7,11 @@ function checkLoginCredentials($username, $password) {
 
   $sql = "SELECT users.username, users.password 
           FROM users
-          WHERE users.username = :username AND users.password = :pword";
+          WHERE users.username = :username AND users.password = :password";
 
   $query = $db->prepare($sql); 
   $query->bindValue(':username', $username, PDO::PARAM_STR);
-  $query->bindValue(':pword', $password, PDO::PARAM_STR);
+  $query->bindValue(':password', $password, PDO::PARAM_STR);
 
   $query->execute();
 

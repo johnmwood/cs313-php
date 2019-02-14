@@ -24,7 +24,7 @@
   <a href="home.php" class="brand-logo">
     <img src="<?php echo $root . '../images/evergreen.png'; ?>" alt="">Emaily
   </a>
-  <ul id="nav-mobile" class="right">
+  <ul className="right"> <!-- id="nav-mobile"  -->
     <?php 
       if ($loginName) {
         echo "<li>
