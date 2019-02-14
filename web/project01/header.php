@@ -28,7 +28,7 @@
     <?php 
       if ($loginName) {
         echo "<li>" . $loginName . "</li>";
-        echo "<li className=\"btn-flat blue\" style=\"margin: '0 10px'\">
+        echo "<li className='btn-flat blue' style='margin: \"0 10px\"'>
                   User Credits: " . $credits . "
               </li>";
       }
