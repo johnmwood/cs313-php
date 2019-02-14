@@ -5,6 +5,7 @@
 
   $file = pathinfo($_SERVER['PHP_SELF'], PATHINFO_FILENAME);
   $root = $_SERVER["DOCUMENT_ROOT"]; 
+  $loginName = $GLOBALS["loginName"];
 
   if ($loginName) {
     $query = $db->prepare("SELECT credits
@@ -32,7 +33,7 @@
                 <div>
                   User Credits: " . $credits . "
                 </div>
-             </li>";
+              </li>";
       }
     ?>
   </ul>
