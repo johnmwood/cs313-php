@@ -1,5 +1,5 @@
 <?php
-  session_start(); 
+  session_start();
   require("../db/dbConnect.php");
 
   $db = connectPostgres(); 
@@ -24,16 +24,12 @@
   <a href="home.php" class="brand-logo">
     <img src="<?php echo $root . '../images/evergreen.png'; ?>" alt="">Emaily
   </a>
-  <ul className="right"> <!-- id="nav-mobile"  -->
+  <ul id="nav-mobile" class="right">
     <?php 
       if ($loginName) {
-        echo "<li>
-                <div>" . $loginName . "</div>
-              </li>";
-        echo "<li className=\"btn-flat blue\">
-                <div>
+        echo "<li>" . $loginName . "</li>";
+        echo "<li className=\"btn-flat blue\" style=\"margin: '0 10px'\">
                   User Credits: " . $credits . "
-                </div>
               </li>";
       }
     ?>
