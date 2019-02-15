@@ -1,6 +1,6 @@
 <?php 
 session_start(); 
-require("../db/dbConnect.php");
+require("../../db/dbConnect.php");
 
 function checkLoginCredentials($username, $password) {
   $db = connectPostgres(); 
