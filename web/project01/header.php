@@ -18,10 +18,12 @@
     $row = $query->fetch(PDO::FETCH_ASSOC);
     $credits = $row["credits"];
   }
+
+  $homePath = ($loginName ? "main.php" : "login.php");
 ?>
 <nav>
 <div class="nav-wrapper teal lighten-2">
-  <a href="home.php" class="brand-logo">
+  <a href="<?php echo $homePath; ?>" class="brand-logo">
     <img src="<?php echo $root . '../images/evergreen.png'; ?>" alt="">Emaily
   </a>
   <ul id="nav-mobile" class="right">
