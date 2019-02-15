@@ -1,6 +1,6 @@
 <?php 
   session_start(); 
-  require("../db/dbConnect.php");
+  require("../../db/dbConnect.php");
 
 ?>
 <!DOCTYPE html>
@@ -17,7 +17,7 @@
   <?php require("./header.php"); ?> 
   <h3>Send out a survey</h3>
   <div class="row">
-    <form class="" method="POST" action="confirmation.php">
+    <form class="" method="POST" action="../processing/confirmation.php">
       <h5>Fill out email information:</h5>
       <div class="row">
         <div class="input-field col s6">
