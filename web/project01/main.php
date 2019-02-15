@@ -12,8 +12,8 @@
   <?php require('./header.php'); ?>
   <h3>Welcome <?php echo $_SESSION["loginName"]; ?></h3>
   <div>
-    <a class="wave-effect waves-light btn" href="./forms/addUsers.php">
-      Add users
+    <a class="wave-effect waves-light btn" href="./forms/addClients.php">
+      Add clients
     </a>
     <a class="wave-effect waves-light btn" href="./forms/sendEmails.php">
       Send out an email campaign

@@ -5,7 +5,7 @@ require("../../db/dbConnect.php");
 function checkLoginCredentials($username, $password) {
   $db = connectPostgres(); 
 
-  $sql = "SELECT users.username, users.password 
+  $sql = "SELECT users.id, users.username, users.password 
           FROM users
           WHERE users.username = :username AND users.password = :password";
 
@@ -18,7 +18,8 @@ function checkLoginCredentials($username, $password) {
   $results = $query->fetch(PDO::FETCH_ASSOC); 
 
   if ($results["username"]) {
-    $_SESSION["loginName"] = $username;  
+    $_SESSION["userId"] = $results["id"];
+    $_SESSION["loginName"] = $results["username"];  
     header("Location: ../main.php"); 
     die();
   } else {
