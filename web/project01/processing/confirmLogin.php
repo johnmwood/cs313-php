@@ -27,10 +27,10 @@ function checkLoginCredentials($username, $password) {
   }
 } 
 
-$username = $_POST["username"]; 
-$password = $_POST["password"];
-
 try {
+  $username = $_POST["username"]; 
+  $password = $_POST["password"];
+
   checkLoginCredentials($username, $password); 
 } catch (PDOException $ex) {
   echo 'Error!: ' . $ex->getMessage();

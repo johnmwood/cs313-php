@@ -7,9 +7,12 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" type="text/css" href="../src/styles.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <title>Document</title>
 </head>
 <body>
+  <?php require('../header.php'); ?> 
   <div class="row">
     <form class="" method="POST" action="confirmation.php">
       <h5>Fill out email information:</h5>
