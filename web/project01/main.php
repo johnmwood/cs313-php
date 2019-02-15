@@ -12,9 +12,7 @@
   <?php require('./header.php'); ?>
   <h3>Welcome <?php echo $_SESSION["loginName"]; ?></h3>
   <div>
-    <a style="margin: '0 10px'" class="wave-effect waves-light btn" href="./sendEmails.php">
-      <h5>Send out email campaign</h5>
-    </a> 
+    <a style="margin: '0 10px'" class="wave-effect waves-light btn" href="./sendEmails.php"></a> 
   </div>
 </body>
 </html>
