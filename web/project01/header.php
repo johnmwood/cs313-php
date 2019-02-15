@@ -29,7 +29,7 @@
       if ($loginName) {
         echo "<li>" . $loginName . "</li>";
         echo "<li className='btn-flat blue' style='margin: \"0 10px\"'>
-                  User Credits: " . $credits . "
+                  <a class='wave-effect waves-light btn'>User Credits: " . $credits . "</a>
               </li>";
       }
     ?>
