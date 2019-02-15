@@ -12,7 +12,7 @@
   <?php require('./header.php'); ?>
   <h3>Please login</h3>
   <div class="row">
-    <form class="" method="POST" action="./confirmLogin.php">
+    <form class="" method="POST" action="./processing/confirmLogin.php">
       <div class="row">
         <div class="input-field col s6">
           <input id="username" type="text" class="validate" name="username">
