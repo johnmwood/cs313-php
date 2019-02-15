@@ -19,10 +19,10 @@ function checkLoginCredentials($username, $password) {
 
   if ($results["username"]) {
     $_SESSION["loginName"] = $username;  
-    header("Location: main.php"); 
+    header("Location: ../main.php"); 
     die();
   } else {
-    header("Location: login.php");
+    header("Location: ../login.php");
     die();
   }
 } 
