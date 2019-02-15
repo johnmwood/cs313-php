@@ -14,7 +14,7 @@
   <div>
     <a class="wave-effect waves-light btn" href="./sendEmails.php">
       <h5>Send out email campaign</h5>
-    </a>
+    </a> 
   </div>
 </body>
 </html>
