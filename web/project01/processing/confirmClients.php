@@ -1,6 +1,6 @@
 <?php
 
-require("../../db/dbConnect.php");
+require(ROOT_PATH."db/dbConnect.php");
 
 function splitByCommas($text) {
   return explode(', ', $text); // php dumb function name 

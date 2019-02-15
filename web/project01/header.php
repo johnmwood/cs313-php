@@ -1,6 +1,9 @@
 <?php
+  define('ROOT_PATH', 'project01/'); // should be defined in a config file 
+                                     // initialized at the start of the application
+  
   session_start();
-  require("../db/dbConnect.php");
+  require(ROOT_PATH."db/dbConnect.php");
 
   $db = connectPostgres(); 
 
