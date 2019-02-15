@@ -1,5 +1,5 @@
 <?php
-  define('ROOT_PATH', 'project01/'); // should be defined in a config file 
+  define('ROOT_PATH', 'web/project01/'); // should be defined in a config file 
                                      // initialized at the start of the application
   
   session_start();
