@@ -27,7 +27,7 @@
   <ul id="nav-mobile" class="right">
     <?php 
       if ($loginName) {
-        echo "<li><a>" . $loginName . "</a></li>";
+        echo "<li><h5>" . $loginName . "</h5></li>";
         echo "<li className='btn-flat blue' style='margin: \"0 10px\"'>
                   <a class='wave-effect waves-light btn'>
                     User Credits: " . $credits . 
