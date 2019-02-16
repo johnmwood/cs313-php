@@ -2,6 +2,16 @@
   session_start(); 
   require("../db/dbConnect.php");
 
+  $db = connectPostgres();
+  $sql = "SELECT id, name, email
+          FROM clients 
+          WHERE user_id = :user_id";
+   
+  $statement = $db->perpare($sql); 
+  $statement->bindValue(':user_id', $_SESSION["user_id"], PDO::PARAM_INT); 
+  $statement->execute(); 
+
+  $results = $statement->fetchAll(PDO::FETCH_ASSOC); 
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -36,10 +46,17 @@
         </div>
       </div>
       <div class="row">
-        <div class="input-field col s12">
-          <input id="emails" type="text" class="validate" name="emails">
-          <label class="active" for="state">emails</label> (Comma separated)
-        </div> 
+        <?php 
+          foreach($results as $row) {
+            echo "<p>
+                    <label>
+                      <input type='checkbox' class='filled-in' name='" . $row["name"] . "'/>
+                      <span>" . $row["name"] . "-" . $row["email"] . "</span>
+                    </label>
+                  </p>";
+          }
+
+        ?>
       </div>
 
       <button class="btn waves-effect waves-light" type="submit" name="action">
