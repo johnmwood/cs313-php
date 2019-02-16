@@ -3,7 +3,7 @@
                                          // initialized at the start of the application
   
   session_start();
-  require(__DIR__."db/dbConnect.php");
+  require(__DIR__."/db/dbConnect.php");
 
   $db = connectPostgres(); 
 
@@ -21,7 +21,7 @@
     $credits = $row["credits"];
   }
 
-  $homePath = ($loginName ? __DIR__."main.php" : __DIR__."login.php");
+  $homePath = ($loginName ? __DIR__."/main.php" : __DIR__."/login.php");
 ?>
 <nav>
 <div class="nav-wrapper teal lighten-2">

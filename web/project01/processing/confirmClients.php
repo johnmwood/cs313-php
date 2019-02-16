@@ -1,6 +1,6 @@
 <?php
 
-require(__DIR__."db/dbConnect.php");
+require(__DIR__."/db/dbConnect.php");
 
 function splitByCommas($text) {
   return explode(', ', $text); // php dumb function name 
