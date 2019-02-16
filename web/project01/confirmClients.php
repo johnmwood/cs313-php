@@ -26,12 +26,18 @@ function finalizeClients($emails, $names) {
       $clients["names"] = $names; 
     }
   } else {
-    for($i=0; $i < count($emails); $i++) {
-      if(preg_match($email_re, $emails[$i])) {
-        $clients["emails"] = $emails[$i]; 
-        $clients["names"] = $names[$i]; 
+    // for($i=0; $i < count($emails); $i++) {
+    //   if(preg_match($email_re, $emails[$i])) {
+    //     $clients["emails"] = $emails[$i]; 
+    //     $clients["names"] = $names[$i]; 
+    //   }
+    // }
+    array_map(function($email, $name) {
+      if(preg_match($email_re, $email)) {
+        $clients["emails"] = $email; 
+        $clients["names"] = $name; 
       }
-    }
+    }, $emails, $names);
   }
 
   return $clients; 
