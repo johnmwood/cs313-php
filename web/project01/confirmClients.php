@@ -47,6 +47,9 @@ function finalizeClients($emails, $names) {
     // }
   }
 
+  $clients["names"] = $namesFinal; 
+  $clients["emails"] = $emailsFinal;
+
   return $clients; 
 }
 
