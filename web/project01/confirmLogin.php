@@ -1,4 +1,5 @@
 <?php 
+ini_set('session.cookie_lifetime', 60 * 60);
 session_start(); 
 require("../db/dbConnect.php");
 
@@ -17,7 +18,7 @@ function checkLoginCredentials($username, $password) {
 
   $results = $query->fetch(PDO::FETCH_ASSOC); 
 
-  if ($results["username"]) {
+  if ($results["username"] && $results["id"]) {
     $_SESSION["userId"] = $results["id"];
     $_SESSION["loginName"] = $results["username"];  
     header("Location: ./main.php"); 

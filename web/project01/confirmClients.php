@@ -38,8 +38,9 @@ function writeClientsToPostgres($clients) {
   
     $db = connectPostgres();
   
-    $sql = "INSERT INTO clients(name, email, user_id) VALUES(:name, :email, " . $_SESSION["userId"] . ")"; 
     foreach($clients as $client) {
+      $sql = "INSERT INTO clients(name, email, user_id) VALUES(:name, :email, " . $_SESSION["userId"] . ")"; 
+      
       $statement = $db->prepare($sql); 
       $statement->bindValue(':name', $client["names"], PDO::PARAM_STR); 
       $statement->bindValue(':email', $client["emails"], PDO::PARAM_STR); 
