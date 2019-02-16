@@ -32,12 +32,18 @@ function finalizeClients($emails, $names) {
     //     $clients["names"] = $names[$i]; 
     //   }
     // }
-    array_map(function($email, $name) {
+    // array_map(function($email, $name) {
+    //   if(preg_match($email_re, $email)) {
+    //     $clients["emails"] = $email; 
+    //     $clients["names"] = $name; 
+    //   }
+    // }, $emails, $names);
+    foreach(array_combine($emails, $names) as $email => $name) {
       if(preg_match($email_re, $email)) {
         $clients["emails"] = $email; 
         $clients["names"] = $name; 
       }
-    }, $emails, $names);
+    }
   }
 
   return $clients; 
