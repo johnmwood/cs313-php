@@ -31,7 +31,7 @@
   <ul id="nav-mobile" class="right">
     <?php 
       if ($userId) {
-        echo "<li><h5>" . $userId . "</h5></li>";
+        echo "<li><h5>" . $_SESSION["loginName"] . "</h5></li>";
         echo "<li className='btn-flat blue' style='margin: \"0 10px\"'>
                   <a class='wave-effect waves-light btn'>
                     User Credits: " . $credits . 
