@@ -1,6 +1,6 @@
 <?php 
 session_start(); 
-require(__DIR__."/db/dbConnect.php");
+require("../db/dbConnect.php");
 
 function checkLoginCredentials($username, $password) {
   $db = connectPostgres(); 
@@ -20,10 +20,10 @@ function checkLoginCredentials($username, $password) {
   if ($results["username"]) {
     $_SESSION["userId"] = $results["id"];
     $_SESSION["loginName"] = $results["username"];  
-    header("Location: ../main.php"); 
+    header("Location: ./main.php"); 
     die();
   } else {
-    header("Location: ../login.php");
+    header("Location: ./login.php");
     die();
   }
 } 

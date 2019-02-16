@@ -9,7 +9,7 @@
   <title>Add Clients</title>
 </head>
 <body>
-  <?php require('../header.php'); ?> 
+  <?php require('./header.php'); ?> 
   <div class="row">
     <form class="" method="POST" action="../processing/confirmClients.php">
       <h5>Fill out client(s) information:</h5>

@@ -1,6 +1,6 @@
 <?php
 
-require(__DIR__."/db/dbConnect.php");
+require("../db/dbConnect.php");
 
 function splitByCommas($text) {
   return explode(', ', $text); // php dumb function name 
@@ -9,7 +9,7 @@ function splitByCommas($text) {
 function finalizeEmails(&$emails, &$names) {
   // must have equal number of client names to emails 
   if (count($names) != count($emails)) {
-    header('Location: ../forms/addClients.php');
+    header('Location: ./addClients.php');
     die();
   }
 
@@ -32,7 +32,7 @@ function writeClientsToPostgres($clients) {
   try {
     // user not logged in 
     if (!$_SESSION["userId"]) {
-      header('Location: ../login.php');
+      header('Location: ./login.php');
       die();
     }
   
@@ -64,6 +64,6 @@ $clients["names"] = $names;
 
 writeClientsToPostgres($clients);
 
-header('Location: ../main.php');
+header('Location: ./main.php');
 die();
 ?>

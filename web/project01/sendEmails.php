@@ -1,6 +1,6 @@
 <?php 
   session_start(); 
-  require(__DIR__."/db/dbConnect.php");
+  require("../db/dbConnect.php");
 
 ?>
 <!DOCTYPE html>
