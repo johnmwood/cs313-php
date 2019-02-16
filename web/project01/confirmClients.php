@@ -46,9 +46,8 @@ function writeClientsToPostgres($clients) {
   
     $db = connectPostgres();
   
+    $sql = "INSERT INTO clients(name, email, user_id) VALUES(:name, :email, " . $_SESSION["userId"] . ")"; 
     foreach($clients as $client) {
-      $sql = "INSERT INTO clients(name, email, user_id) VALUES(:name, :email, " . $_SESSION["userId"] . ")"; 
-      
       $statement = $db->prepare($sql); 
       $statement->bindValue(':name', $client["names"], PDO::PARAM_STR); 
       $statement->bindValue(':email', $client["emails"], PDO::PARAM_STR); 
@@ -71,6 +70,18 @@ $clients = finalizeClients($emails, $names);
 
 writeClientsToPostgres($clients);
 
-header('Location: ./main.php');
-die();
+// header('Location: ./main.php');
+// die();
 ?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <h3><?php echo $clients; ?></h3>
+</body>
+</html>
