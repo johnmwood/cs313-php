@@ -11,7 +11,7 @@ function splitByCommas($text) {
   return explode(', ', $text); // php dumb function name 
 }
 
-function finalizeEmails(&$emails, &$names) {
+function finalizeClients($emails, $names) {
   // must have equal number of client names to emails 
   if (count($names) != count($emails)) {
     header('Location: ./addClients.php');
@@ -30,6 +30,11 @@ function finalizeEmails(&$emails, &$names) {
       $namesFinal[] = $names[$i]; 
     }
   }
+
+  $clients["emails"] = $emailsFinal; 
+  $clients["names"] = $namesFinal; 
+
+  return $clients; 
 }
 
 function writeClientsToPostgres($clients) {
@@ -64,9 +69,9 @@ $emails = htmlspecialchars($_POST["emails"]);
 $names = splitByCommas($names); 
 $emails = splitByCommas($emails); 
 
-finalizeEmails($emails, $names);
-$clients["emails"] = $emails; 
-$clients["names"] = $names; 
+$clients = finalizeClients($emails, $names);
+// $clients["emails"] = $emails; 
+// $clients["names"] = $names; 
 
 writeClientsToPostgres($clients);
 
