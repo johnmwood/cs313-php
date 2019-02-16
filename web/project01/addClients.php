@@ -11,7 +11,7 @@
 <body>
   <?php require('./header.php'); ?> 
   <div class="row">
-    <form class="" method="POST" action="../processing/confirmClients.php">
+    <form class="" method="POST" action="./confirmClients.php">
       <h5>Fill out client(s) information:</h5>
       <div class="row">
         <div class="input-field col s12">
