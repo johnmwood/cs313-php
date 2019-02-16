@@ -19,10 +19,16 @@ function finalizeClients($emails, $names) {
 
   $clients = array(); // array of clients with validated emails 
 
-  for($i=0; $i < count($emails); $i++) {
-    if(preg_match($email_re, $emails[$i])) {
-      $clients["emails"] = $emails[$i]; 
-      $clients["names"] = $names[$i]; 
+  // one email is not an array and needs to be handled individually 
+  if (count($emails) == 1 && preg_match($email_re, $emails)) {
+    $clients["emails"] = $emails; 
+    $clients["names"] = $names; 
+  } else {
+    for($i=0; $i < count($emails); $i++) {
+      if(preg_match($email_re, $emails[$i])) {
+        $clients["emails"] = $emails[$i]; 
+        $clients["names"] = $names[$i]; 
+      }
     }
   }
 
