@@ -12,10 +12,10 @@
   <?php require('./header.php'); ?>
   <h3>Welcome <?php echo $_SESSION["loginName"]; ?></h3>
   <div>
-    <a class="wave-effect waves-light btn" href="./forms/addClients.php">
+    <a class="wave-effect waves-light btn" href="./addClients.php">
       Add clients
     </a>
-    <a class="wave-effect waves-light btn" href="./forms/sendEmails.php">
+    <a class="wave-effect waves-light btn" href="./sendEmails.php">
       Send out an email campaign
     </a> 
   </div>
