@@ -35,8 +35,8 @@ function finalizeClients($emails, $names) {
     // }
     array_map(function($email, $name) {
       if(preg_match($email_re, $email)) {
-        $emailsFinal[] = $email; 
-        $namesFinal[] = $name; 
+        array_push($emailsFinal, $email); 
+        array_push($namesFinal, $name); 
       }
     }, $emails, $names);
     // foreach(array_combine($emails, $names) as $email => $name) {
