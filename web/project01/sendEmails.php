@@ -7,7 +7,7 @@
           FROM clients 
           WHERE user_id = :user_id";
    
-  $statement = $db->perpare($sql); 
+  $statement = $db->prepare($sql); 
   $statement->bindValue(':user_id', $_SESSION["user_id"], PDO::PARAM_INT); 
   $statement->execute(); 
 
