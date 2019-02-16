@@ -82,6 +82,13 @@ writeClientsToPostgres($clients);
   <title>Document</title>
 </head>
 <body>
-  <h3><?php echo $clients; ?></h3>
+  <h3>
+  <?php 
+    foreach($clients as $client) {
+      echo "<h3>Name: " . $client["names"] . "</h3>";
+      echo "<h3>Email: " . $client["emails"] . "</h3>";
+    }
+  ?>
+  </h3>
 </body>
 </html>
