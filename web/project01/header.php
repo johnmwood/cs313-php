@@ -1,14 +1,13 @@
 <?php
-  define('ROOT_PATH', 'web/project01/'); // should be defined in a config file 
-                                     // initialized at the start of the application
+  define('ROOT_PATH', '/app/web/project01/'); // should be defined in a config file 
+                                         // initialized at the start of the application
   
   session_start();
   require(ROOT_PATH."db/dbConnect.php");
 
   $db = connectPostgres(); 
 
-  $file = pathinfo($_SERVER['PHP_SELF'], PATHINFO_FILENAME);
-  $root = $_SERVER["DOCUMENT_ROOT"]; 
+  // $file = pathinfo($_SERVER['PHP_SELF'], PATHINFO_FILENAME);
   $loginName = $_SESSION["loginName"];
 
   if ($loginName) {
@@ -22,7 +21,7 @@
     $credits = $row["credits"];
   }
 
-  $homePath = ($loginName ? "main.php" : "login.php");
+  $homePath = ($loginName ? ROOT_PATH."main.php" : ROOT_PATH."login.php");
 ?>
 <nav>
 <div class="nav-wrapper teal lighten-2">
