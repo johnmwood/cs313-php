@@ -27,34 +27,15 @@ function finalizeClients($emails, $names) {
       $namesFinal[] = $names; 
     }
   } else {
-    // for($i=0; $i < count($emails); $i++) {
-    //   if(preg_match($email_re, $emails[$i])) {
-    //     $clients["emails"] = $emails[$i]; 
-    //     $clients["names"] = $names[$i]; 
-    //   }
-    // }
     array_map(function($email, $name) {
       if(preg_match($email_re, $email)) {
-        $emailsFinal[] = $email;
-        $namesFinal[] = $name;
+        writeClientToPostgres($name, $email);
       }
     }, $emails, $names);
-    // foreach(array_combine($emails, $names) as $email => $name) {
-    //   if(preg_match($email_re, $email)) {
-    //     array_push($clients["emails"], $email); 
-    //     array_push($clients["names"], $name); 
-    //   }
-    // }
   }
-
-  $clients["names"] = $namesFinal; 
-  $clients["emails"] = $emailsFinal;
-
-  return $clients; 
 }
 
-function writeClientsToPostgres($clients) {
-  
+function writeClientToPostgres($name, $email) {
   try {
     // user not logged in 
     if (!$_SESSION["userId"]) {
@@ -67,8 +48,8 @@ function writeClientsToPostgres($clients) {
     $sql = "INSERT INTO clients(name, email, user_id) VALUES(:name, :email, " . $_SESSION["userId"] . ")"; 
     foreach($clients as $client) {
       $statement = $db->prepare($sql); 
-      $statement->bindValue(':name', $client["names"], PDO::PARAM_STR); 
-      $statement->bindValue(':email', $client["emails"], PDO::PARAM_STR); 
+      $statement->bindValue(':name', $name, PDO::PARAM_STR); 
+      $statement->bindValue(':email', $email, PDO::PARAM_STR); 
 
       $statement->execute(); // write to db 
     }
@@ -84,9 +65,7 @@ $emails = htmlspecialchars($_POST["emails"]);
 $names = splitByCommas($names); 
 $emails = splitByCommas($emails); 
 
-$clients = finalizeClients($emails, $names);
-
-writeClientsToPostgres($clients);
+finalizeClients($emails, $names);
 
 // header('Location: ./main.php');
 // die();
