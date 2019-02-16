@@ -89,11 +89,12 @@ finalizeClients($emails, $names);
       echo "<h5>Email: " . $email . "</h5>";
     }
 
-    echo "<h1>Clients</h1>";
-    foreach($clients as $client) {
-      echo "<h3>Name: " . $client["names"] . "</h3>";
-      echo "<h3>Email: " . $client["emails"] . "</h3>";
-    }
+    array_map(function($email, $name) {
+      if(preg_match($email_re, $email)) {
+        echo "<h2>Email: " . $email . "</h2>";
+        echo "<h2>Name: " . $name . "</h2>";
+      }
+    }, $emails, $names);
   ?>
   </h3>
 </body>
