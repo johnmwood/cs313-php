@@ -40,8 +40,8 @@ function finalizeClients($emails, $names) {
     // }, $emails, $names);
     foreach(array_combine($emails, $names) as $email => $name) {
       if(preg_match($email_re, $email)) {
-        $clients["emails"] = $email; 
-        $clients["names"] = $name; 
+        array_push($clients["emails"], $email); 
+        array_push($clients["names"], $name); 
       }
     }
   }
