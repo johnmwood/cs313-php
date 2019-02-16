@@ -36,13 +36,12 @@ function writeClientToPostgres($name, $email) {
     $db = connectPostgres();
   
     $sql = "INSERT INTO clients(name, email, user_id) VALUES(:name, :email, " . $_SESSION["userId"] . ")"; 
-    foreach($clients as $client) {
-      $statement = $db->prepare($sql); 
-      $statement->bindValue(':name', $name, PDO::PARAM_STR); 
-      $statement->bindValue(':email', $email, PDO::PARAM_STR); 
+    $statement = $db->prepare($sql); 
+    $statement->bindValue(':name', $name, PDO::PARAM_STR); 
+    $statement->bindValue(':email', $email, PDO::PARAM_STR); 
 
-      $statement->execute(); // write to db 
-    }
+    $statement->execute(); // write to db 
+
   } catch(PDOException $ex) { 
     echo 'Error!: ' . $ex->getMessage();
     die();
