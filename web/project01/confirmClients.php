@@ -97,9 +97,10 @@ writeClientsToPostgres($clients);
     }
 
     foreach($emails as $email) {
-      echo "<h5>Name: " . $email . "</h5>";
+      echo "<h5>Email: " . $email . "</h5>";
     }
 
+    echo "<h1>Clients</h1>";
     foreach($clients as $client) {
       echo "<h3>Name: " . $client["names"] . "</h3>";
       echo "<h3>Email: " . $client["emails"] . "</h3>";
