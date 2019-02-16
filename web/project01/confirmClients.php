@@ -4,10 +4,6 @@ session_start();
 require("../db/dbConnect.php");
 
 function splitByCommas($text) {
-  if(count($text) < 2) {
-    return $text; 
-  }
-
   return explode(', ', $text); // php dumb function name 
 }
 
@@ -66,8 +62,6 @@ $names = splitByCommas($names);
 $emails = splitByCommas($emails); 
 
 $clients = finalizeClients($emails, $names);
-// $clients["emails"] = $emails; 
-// $clients["names"] = $names; 
 
 writeClientsToPostgres($clients);
 
