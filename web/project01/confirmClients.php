@@ -90,10 +90,8 @@ finalizeClients($emails, $names);
     }
 
     array_map(function($email, $name) {
-      if(preg_match($email_re, $email)) {
-        echo "<h2>Email: " . $email . "</h2>";
-        echo "<h2>Name: " . $name . "</h2>";
-      }
+      echo "<h2>Email: " . $email . "</h2>";
+      echo "<h2>Name: " . $name . "</h2>";
     }, $emails, $names);
   ?>
   </h3>
