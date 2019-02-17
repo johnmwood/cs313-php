@@ -1,7 +1,7 @@
 <?php
 
 session_start();
-require("../db/dbConnect.php");
+include_once("../db/dbConnect.php");
 
 function splitByCommas($text) {
   return explode(', ', $text); // php dumb function name 

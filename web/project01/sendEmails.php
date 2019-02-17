@@ -2,7 +2,7 @@
   session_start(); 
   include_once("../db/dbConnect.php");
 
-  $db = connectPostgres(); 
+  // $db = connectPostgres(); 
 
   $sql = "SELECT id, name, email
           FROM clients 

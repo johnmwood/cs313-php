@@ -3,7 +3,7 @@
                                          // initialized at the start of the application
   
   session_start();
-  require("../db/dbConnect.php");
+  include_once("../db/dbConnect.php");
 
   $db = connectPostgres(); 
 
