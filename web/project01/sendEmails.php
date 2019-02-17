@@ -19,15 +19,15 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link rel="stylesheet" type="text/css" href="../../src/styles.css">
+  <link rel="stylesheet" type="text/css" href="../src/styles.css">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  <title>Home</title>
+  <title>Send Emails</title>
 </head>
 <body>
   <?php require("./header.php"); ?> 
   <h3>Send out a survey</h3>
   <div class="row">
-    <form class="" method="POST" action="../processing/confirmation.php">
+    <form class="" method="POST" action="./home.php">
       <h5>Fill out email information:</h5>
       <div class="row">
         <div class="input-field col s6">
@@ -45,17 +45,17 @@
           <label class="active" for="body">Body</label>
         </div>
       </div>
+      <h5>Clients: </h5>
       <div class="row">
         <?php 
           foreach($results as $row) {
             echo "<p>
                     <label>
-                      <input type='checkbox' class='filled-in' name='" . $row["name"] . "'/>
+                      <input type='checkbox' class='filled-in' name='" . $row["name"] . "' />
                       <span>" . $row["name"] . "-" . $row["email"] . "</span>
                     </label>
-                  </p>";
+                  </p></br>";
           }
-
         ?>
       </div>
 
