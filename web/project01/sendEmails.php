@@ -2,7 +2,8 @@
   session_start(); 
   require("../db/dbConnect.php");
 
-  $db = connectPostgres();
+  $db = connectPostgres(); 
+
   $sql = "SELECT id, name, email
           FROM clients 
           WHERE user_id = :user_id";
