@@ -30,7 +30,7 @@ function checkLoginCredentials($username, $password) {
                hashedPassword: $passwordHash
                Results: $results"; 
 
-    echo "<html><script>console.log( 'Debug Objects: " . $output . "' );</script></html>";
+    echo "<html><head><script>console.log( 'Debug Objects: " . $output . "' );</script></head></html>";
     // header("Location: ./login.php"); 
     // die(); 
   }
