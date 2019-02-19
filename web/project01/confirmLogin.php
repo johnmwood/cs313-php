@@ -22,7 +22,6 @@ function checkLoginCredentials($username, $password) {
     $_SESSION["loginName"] = $results["username"];  
     header("Location: ./main.php");
     die(); 
-
   } else {
     header("Location: ./login.php"); 
     die(); 
