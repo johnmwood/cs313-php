@@ -25,14 +25,14 @@
           <label class="active" for="state">password</label>
         </div> 
       </div>
-
-      <button class="btn waves-effect waves-light" type="submit" name="action">
-        Login
-      </button>
+      <div class="row">
+        <button class="btn waves-effect waves-light" type="submit" name="action">
+          Login
+        </button>
+        <a class="wave-effect waves-light btn" href="./registerUser.php">
+          Sign Up
+        </a>
+      </div>
     </form> 
-
-    <a class="wave-effect waves-light btn" href="./registerUser.php">
-      Sign Up
-    </a>
 </body>
 </html>
