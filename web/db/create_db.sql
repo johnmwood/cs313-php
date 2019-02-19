@@ -48,3 +48,4 @@ CREATE TABLE transactions (
     template_id SERIAL REFERENCES email_templates(id) 
 );
 
+UPDATE clients SET user_id = 35 WHERE user_id = 2; 

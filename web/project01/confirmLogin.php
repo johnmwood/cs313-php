@@ -13,24 +13,19 @@ function checkLoginCredentials($username, $password) {
   $query = $db->prepare($sql); 
   $query->bindValue(':username', $username, PDO::PARAM_STR);
   $query->execute();
-  $results = $query->fetchAll(); 
+  $results = $query->fetch(PDO::FETCH_ASSOC); 
   
   $passwordHash = password_hash($password, PASSWORD_DEFAULT);
-  if($results) {
-    foreach($results as $result) {
-      // verify db password vs. user hashed password 
-      if (password_verify($result["password"], $passwordHash)) {
-        $_SESSION["userId"] = $result["id"];
-        $_SESSION["loginName"] = $result["username"];  
-        header("Location: ./main.php");
-        die(); 
+  // verify db password vs. user hashed password 
+  if (password_verify($results["password"], $passwordHash)) {
+    $_SESSION["userId"] = $results["id"];
+    $_SESSION["loginName"] = $results["username"];  
+    header("Location: ./main.php");
+    die(); 
 
-        break; // just in case there are multiple user names 
-      } else {
-        header("Location: ./login.php"); 
-        die(); 
-      }
-    }
+  } else {
+    header("Location: ./login.php"); 
+    die(); 
   }
 } 
 
