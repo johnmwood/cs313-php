@@ -4,28 +4,33 @@ session_start();
 require("../db/dbConnect.php");
 
 function checkLoginCredentials($username, $password) {
+  
   $db = connectPostgres(); 
-
   $sql = "SELECT users.id, users.username, users.password 
           FROM users
-          WHERE users.username = :username AND users.password = :password";
+          WHERE users.username = :username";
 
   $query = $db->prepare($sql); 
   $query->bindValue(':username', $username, PDO::PARAM_STR);
-  $query->bindValue(':password', $password, PDO::PARAM_STR);
-
   $query->execute();
+  $results = $query->fetchAll(); 
+  
+  $passwordHash = password_hash($password, PASSWORD_DEFAULT);
+  if($results) {
+    foreach($results as $result) {
+      // verify db password vs. user hashed password 
+      if (password_verify($result["password"], $passwordHash)) {
+        $_SESSION["userId"] = $result["id"];
+        $_SESSION["loginName"] = $result["username"];  
+        header("Location: ./main.php");
+        die(); 
 
-  $results = $query->fetch(PDO::FETCH_ASSOC); 
-
-  if ($results["username"] && $results["id"]) {
-    $_SESSION["userId"] = $results["id"];
-    $_SESSION["loginName"] = $results["username"];  
-    header("Location: ./main.php"); 
-    die();
-  } else {
-    header("Location: ./login.php");
-    die();
+        break; // just in case there are multiple user names 
+      } else {
+        header("Location: ./login.php"); 
+        die(); 
+      }
+    }
   }
 } 
 

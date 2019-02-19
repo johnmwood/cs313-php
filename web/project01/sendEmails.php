@@ -26,7 +26,6 @@
 </head>
 <body>
   <?php require("./header.php"); ?> 
-  <h3>Send out a survey</h3>
   <div class="row">
     <form class="" method="POST" action="./home.php">
       <h5>Fill out email information:</h5>
