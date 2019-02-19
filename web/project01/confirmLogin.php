@@ -13,6 +13,7 @@ function checkLoginCredentials($username, $password) {
   $query = $db->prepare($sql); 
   $query->bindValue(':username', $username, PDO::PARAM_STR);
   $query->execute();
+
   $results = $query->fetch(PDO::FETCH_ASSOC); 
   
   $passwordHash = password_hash($password, PASSWORD_DEFAULT);
@@ -23,6 +24,13 @@ function checkLoginCredentials($username, $password) {
     header("Location: ./main.php");
     die(); 
   } else {
+    $output = "username: $username
+               password: $password
+               db password: $password
+               hashedPassword: $passwordHash
+               Results: $results"; 
+
+    echo "<script>console.log( 'Debug Objects: " . $output . "' );</script>";
     header("Location: ./login.php"); 
     die(); 
   }
