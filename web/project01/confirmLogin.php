@@ -21,8 +21,8 @@ function checkLoginCredentials($username, $password) {
   if (password_verify($results["password"], $passwordHash)) {
     $_SESSION["userId"] = $results["id"];
     $_SESSION["loginName"] = $results["username"];  
-    header("Location: ./main.php");
-    die(); 
+    // header("Location: ./main.php");
+    // die(); 
   } else {
     $output = "username: $username
                password: $password
@@ -30,9 +30,9 @@ function checkLoginCredentials($username, $password) {
                hashedPassword: $passwordHash
                Results: $results"; 
 
-    echo "<script>console.log( 'Debug Objects: " . $output . "' );</script>";
-    header("Location: ./login.php"); 
-    die(); 
+    echo "<html><script>console.log( 'Debug Objects: " . $output . "' );</script></html>";
+    // header("Location: ./login.php"); 
+    // die(); 
   }
 } 
 
