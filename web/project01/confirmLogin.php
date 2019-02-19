@@ -28,9 +28,10 @@ function checkLoginCredentials($username, $password) {
                password: $password
                db password: $password
                hashedPassword: $passwordHash
-               Results: $results"; 
+               results['username']: " . $results["username"] . "
+               results['password']: " . $results["password"]; 
 
-    echo "<html><head><script>console.log( 'Debug Objects: " . $output . "' );</script></head></html>";
+    echo "<html><body><script>console.log( 'Debug Objects: " . $output . "' );</script></body></html>";
     // header("Location: ./login.php"); 
     // die(); 
   }
