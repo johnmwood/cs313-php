@@ -18,7 +18,7 @@ function checkLoginCredentials($username, $password) {
   
   $passwordHash = password_hash($password, PASSWORD_DEFAULT);
   // verify db password vs. user hashed password 
-  if (password_verify($results["password"], $passwordHash)) {
+  if (password_verify($results["password"], $password)) {
     $_SESSION["userId"] = $results["id"];
     $_SESSION["loginName"] = $results["username"];  
     // header("Location: ./main.php");
