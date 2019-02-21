@@ -16,24 +16,22 @@ function checkLoginCredentials($username, $password) {
 
   $results = $query->fetch(PDO::FETCH_ASSOC); 
   
-  $passwordHash = password_hash($password, PASSWORD_DEFAULT);
   // verify db password vs. user hashed password 
   if (password_verify($password, $results["password"])) {
     $_SESSION["userId"] = $results["id"];
     $_SESSION["loginName"] = $results["username"]; 
-    echo "<html><body>it worked</body></html>";
-    // header("Location: ./main.php");
-    // die(); 
+    header("Location: ./main.php");
+    die(); 
   } else {
-    $output = "<p>username: $username </br> 
-               password: $password </br>
-               hashedPassword: $passwordHash </br>
-               results['username']: " . $results["username"] . "</br>
-               results['password']: " . $results["password"] . "</p></br>";
+    // $output = "<p>username: $username </br> 
+    //            password: $password </br>
+    //            hashedPassword: $passwordHash </br>
+    //            results['username']: " . $results["username"] . "</br>
+    //            results['password']: " . $results["password"] . "</p></br>";
 
-    echo "<html><body>" . $output . "</body></html>";
-    // header("Location: ./login.php"); 
-    // die(); 
+    // echo "<html><body>" . $output . "</body></html>";
+    header("Location: ./login.php"); 
+    die(); 
   }
 } 
 
