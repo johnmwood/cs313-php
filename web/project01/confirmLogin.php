@@ -31,7 +31,7 @@ function checkLoginCredentials($username, $password) {
                results['username']: " . $results["username"] . "
                results['password']: " . $results["password"]; 
 
-    echo "<html><body><script>console.log( 'Debug Objects: " . $output . "' );</script></body></html>";
+    echo "<html><body>" . $output . "</body></html>";
     // header("Location: ./login.php"); 
     // die(); 
   }
