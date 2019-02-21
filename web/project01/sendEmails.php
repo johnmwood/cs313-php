@@ -1,6 +1,6 @@
 <?php 
   session_start(); 
-  include_once("../db/dbConnect.php");
+  require("../db/dbConnect.php");
 
   $db = connectPostgres(); 
 
@@ -9,7 +9,7 @@
           WHERE user_id = :user_id";
    
   $statement = $db->prepare($sql); 
-  $statement->bindValue(':user_id', $_SESSION["user_id"], PDO::PARAM_INT); 
+  $statement->bindValue(':user_id', $_SESSION["userId"], PDO::PARAM_INT); 
   $statement->execute(); 
 
   $results = $statement->fetchAll(PDO::FETCH_ASSOC); 

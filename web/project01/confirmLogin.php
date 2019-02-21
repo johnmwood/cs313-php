@@ -20,16 +20,10 @@ function checkLoginCredentials($username, $password) {
   if (password_verify($password, $results["password"])) {
     $_SESSION["userId"] = $results["id"];
     $_SESSION["loginName"] = $results["username"]; 
+    
     header("Location: ./main.php");
     die(); 
   } else {
-    // $output = "<p>username: $username </br> 
-    //            password: $password </br>
-    //            hashedPassword: $passwordHash </br>
-    //            results['username']: " . $results["username"] . "</br>
-    //            results['password']: " . $results["password"] . "</p></br>";
-
-    // echo "<html><body>" . $output . "</body></html>";
     header("Location: ./login.php"); 
     die(); 
   }
