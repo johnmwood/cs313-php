@@ -10,7 +10,9 @@ $emails = $_POST["emails"];
 
 $message = "<h3>$title</h3><p>$body</p>"; 
 
-mail($emails, $subject, $message); 
+foreach($emails as $email) {
+  mail(htmlspecialchars($email), $subject, $message); 
+}
 
 // subtract credits for every email sent 
 $db = connectPostgres(); 
