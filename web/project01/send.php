@@ -17,12 +17,13 @@ foreach($emails as $email) {
 // subtract credits for every email sent 
 $db = connectPostgres(); 
 
-$id = $_SESSION['userId']; 
 $creditsSpent = count($emails); 
 $update = "UPDATE users 
-           SET users.credits = users.credits - $creditsSpent 
-           WHERE users.id = $id"; 
-$statement = $db->prepare($update); 
+           SET users.credits = users.credits - :credits 
+           WHERE users.id = :id"; 
+$statement = $db->prepare($update);
+$statement->bindValue(':credits', $creditsSpent, PDO::PARAM_INT);  
+$statement->bindValue(':id', $_SESSION["userId"], PDO::PARAM_INT);  
 $statement->execute(); 
 
 header('Location: ./main.php'); 
