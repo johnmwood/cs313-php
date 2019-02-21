@@ -24,12 +24,12 @@ function checkLoginCredentials($username, $password) {
     // header("Location: ./main.php");
     // die(); 
   } else {
-    $output = "username: $username
-               password: $password
-               db password: $password
-               hashedPassword: $passwordHash
-               results['username']: " . $results["username"] . "
-               results['password']: " . $results["password"]; 
+    $output = "username: $username </br> 
+               password: $password </br>
+               db password: $password </br>
+               hashedPassword: $passwordHash </br>
+               results['username']: " . $results["username"] . "</br>
+               results['password']: " . $results["password"] . "</br>";
 
     echo "<html><body>" . $output . "</body></html>";
     // header("Location: ./login.php"); 
