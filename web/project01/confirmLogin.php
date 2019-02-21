@@ -18,7 +18,7 @@ function checkLoginCredentials($username, $password) {
   
   $passwordHash = password_hash($password, PASSWORD_DEFAULT);
   // verify db password vs. user hashed password 
-  if (password_verify($results["password"], $password)) {
+  if (password_verify($results["password"], $passwordHash)) {
     $_SESSION["userId"] = $results["id"];
     $_SESSION["loginName"] = $results["username"];  
     // header("Location: ./main.php");
@@ -26,7 +26,6 @@ function checkLoginCredentials($username, $password) {
   } else {
     $output = "<p>username: $username </br> 
                password: $password </br>
-               db password: $password </br>
                hashedPassword: $passwordHash </br>
                results['username']: " . $results["username"] . "</br>
                results['password']: " . $results["password"] . "</p></br>";
