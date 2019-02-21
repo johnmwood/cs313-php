@@ -19,8 +19,8 @@ $db = connectPostgres();
 
 $creditsSpent = count($emails); 
 $update = "UPDATE users 
-           SET users.credits = users.credits - :credits 
-           WHERE users.id = :id"; 
+           SET credits = credits - :credits 
+           WHERE id = :id"; 
 $statement = $db->prepare($update);
 $statement->bindValue(':credits', $creditsSpent, PDO::PARAM_INT);  
 $statement->bindValue(':id', $_SESSION["userId"], PDO::PARAM_INT);  
