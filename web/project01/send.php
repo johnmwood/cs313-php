@@ -6,7 +6,7 @@ require('../db/dbConnect.php');
 $title = htmlspecialchars($_POST["title"]); 
 $subject = htmlspecialchars($_POST["subject"]); 
 $body = htmlspecialchars($_POST["body"]); 
-$emails = htmlspecialchars($_POST["emails"]); 
+$emails = $_POST["emails"]; 
 
 $message = "<h3>$title</h3><p>$body</p>"; 
 
