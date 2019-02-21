@@ -15,10 +15,11 @@ mail($emails, $subject, $message);
 // subtract credits for every email sent 
 $db = connectPostgres(); 
 
+$id = $_SESSION['userId']; 
 $creditsSpent = count($emails); 
 $update = "UPDATE users 
            SET users.credits = users.credits - $creditsSpent 
-           WHERE users.id = " . $_SESSION["userId"]; 
+           WHERE users.id = $id"; 
 $statement = $db->prepare($update); 
 $statement->execute(); 
 
