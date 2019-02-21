@@ -27,7 +27,7 @@
 <body>
   <?php require("./header.php"); ?> 
   <div class="row">
-    <form class="" method="POST" action="./home.php">
+    <form class="" method="POST" action="./send.php">
       <h5>Fill out email information:</h5>
       <div class="row">
         <div class="input-field col s6">
@@ -51,7 +51,7 @@
           foreach($results as $row) {
             echo "<p>
                     <label>
-                      <input type='checkbox' class='filled-in' name='" . $row["name"] . "' />
+                      <input type='checkbox' class='filled-in' name='emails[]' />
                       <span>" . $row["name"] . "-" . $row["email"] . "</span>
                     </label>
                   </p></br>";
