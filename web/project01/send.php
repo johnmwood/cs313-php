@@ -9,9 +9,10 @@ $body = htmlspecialchars($_POST["body"]);
 $emails = $_POST["emails"]; 
 
 $message = "<h3>$title</h3><p>$body</p>"; 
+$header = "From: jmw.home@gmail.com"; 
 
 foreach($emails as $email) {
-  mail(htmlspecialchars($email), $subject, $message); 
+  mail(htmlspecialchars($email), $subject, $message, $header); 
 }
 
 // subtract credits for every email sent 
