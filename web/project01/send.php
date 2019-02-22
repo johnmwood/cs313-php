@@ -8,8 +8,9 @@ $subject = htmlspecialchars($_POST["subject"]);
 $body = htmlspecialchars($_POST["body"]); 
 $emails = $_POST["emails"]; 
 
-$message = "<h3>$title</h3><p>$body</p>"; 
-$header = "From: jmw.home@gmail.com"; 
+$message = "<html><body><h3>$title</h3><p>$body</p></body></html>"; 
+$header = "From: jmw.home@gmail.com" . "\r\n";
+$header .= "Content-type:text/html;charset=UTF-8";
 
 foreach($emails as $email) {
   mail(htmlspecialchars($email), $subject, $message, $header); 
