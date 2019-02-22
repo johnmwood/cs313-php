@@ -3,18 +3,19 @@
 require('../db/dbConnect.php'); 
 
 // send email
-$title = htmlspecialchars($_POST["title"]); 
-$subject = htmlspecialchars($_POST["subject"]); 
-$body = htmlspecialchars($_POST["body"]); 
-$emails = $_POST["emails"]; 
+// $title = htmlspecialchars($_POST["title"]); 
+// $subject = htmlspecialchars($_POST["subject"]); 
+// $body = htmlspecialchars($_POST["body"]); 
 
-$message = "<html><body><h3>$title</h3><p>$body</p></body></html>"; 
-$header = "From: jmw.home@gmail.com" . "\r\n";
-$header .= "Content-type:text/html;charset=UTF-8";
+// $emails = $_POST["emails"]; 
+// $emails = implode(', '); 
 
-foreach($emails as $email) {
-  mail(htmlspecialchars($email), $subject, $message, $header); 
-}
+// $message = "<html><body><h3>$title</h3><p>$body</p></body></html>"; 
+// $header = "From: jmw.home@gmail.com" . "\r\n";
+// $header .= "MIME-Version: 1.0" . "\r\n";
+// $header .= "Content-type:text/html;charset=UTF-8";
+
+// mail($emails, $subject, $message, $header); 
 
 // subtract credits for every email sent 
 $db = connectPostgres(); 
