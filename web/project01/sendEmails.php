@@ -51,7 +51,7 @@
           foreach($results as $row) {
             echo "<p>
                     <label>
-                      <input type='checkbox' class='filled-in' name='emails[]' />
+                      <input type='checkbox' class='filled-in' name='emails[]' value='" . $row["email"] . "' />
                       <span>" . $row["name"] . "-" . $row["email"] . "</span>
                     </label>
                   </p></br>";
