@@ -27,14 +27,14 @@ $statement->bindValue(':credits', $creditsSpent, PDO::PARAM_INT);
 $statement->bindValue(':id', $_SESSION["userId"], PDO::PARAM_INT);  
 $statement->execute(); 
 
-$output = "Credits spent: $creditsSpent</br>"; 
-foreach($emails as $email) { 
-  $output .= "Email: $email </br>";
-}
+// $output = "Credits spent: $creditsSpent</br>"; 
+// foreach($emails as $email) { 
+//   $output .= "Email: $email </br>";
+// }
 
-echo "<html><body><p>" . $output . "</p></body></html>";
+// echo "<html><body><p>" . $output . "</p></body></html>";
 
-// header('Location: ./main.php'); 
-// die(); 
+header('Location: ./main.php'); 
+die(); 
 
 ?> 
