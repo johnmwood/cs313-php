@@ -20,7 +20,7 @@ require('../db/dbConnect.php');
 // subtract credits for every email sent 
 $db = connectPostgres(); 
 
-$creditsSpent = count($emails); 
+$creditsSpent = count($_POST["emails"]); 
 $update = "UPDATE users 
            SET credits = credits - :credits 
            WHERE id = :id"; 
